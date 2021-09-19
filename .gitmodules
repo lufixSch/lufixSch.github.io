@@ -1,3 +1,12 @@
 [submodule "guides"]
 	path = guides
 	url = https://github.com/lufixSch/guides.git
+[submodule "_includes/templates/sphinx_documentation"]
+	path = _includes/templates/sphinx_documentation
+	url = git@github.com:lufixSch/documentation_template.git
+[submodule "_includes/templates/meeting_protocol"]
+	path = _includes/templates/meeting_protocol
+	url = git@github.com:lufixSch/meeting-protocol-template.git
+[submodule "_includes/templates/latex_protocol"]
+	path = _includes/templates/latex_protocol
+	url = git@github.com:lufixSch/protokoll_vorlage.git

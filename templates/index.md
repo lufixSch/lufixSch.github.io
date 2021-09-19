@@ -2,8 +2,9 @@
 layout: lufix
 title: Templates
 permalink: /templates/
+has_children: true
 ---
 
-List of templates
+# Templates
 
-<h1>Hallo</h1>
+List of templates

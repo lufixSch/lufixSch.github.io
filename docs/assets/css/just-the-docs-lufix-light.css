@@ -314,9 +314,9 @@ body { position: relative; padding-bottom: 4rem; overflow-y: scroll; }
 
 .nav-list .nav-list-item > .nav-list .nav-list-item { position: relative; }
 
-.nav-list .nav-list-item > .nav-list .nav-list-item .nav-list-link { color: #f5f6fa; }
+.nav-list .nav-list-item > .nav-list .nav-list-item .nav-list-link { color: #44434d; }
 
-.nav-list .nav-list-item > .nav-list .nav-list-item .nav-list-expander { color: #f5f6fa; }
+.nav-list .nav-list-item > .nav-list .nav-list-item .nav-list-expander { color: #44434d; }
 
 .nav-list .nav-list-item.active > .nav-list-expander svg { transform: rotate(-90deg); }
 
