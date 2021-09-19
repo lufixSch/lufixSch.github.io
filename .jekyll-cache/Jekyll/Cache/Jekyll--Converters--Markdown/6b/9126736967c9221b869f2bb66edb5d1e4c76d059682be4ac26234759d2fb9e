@@ -1,0 +1,47 @@
+I"�<h1 id="lights">Lights</h1>
+
+<h2 id="ikea-tådfri">IKEA TÅDFRI</h2>
+
+<p>Most of my smart lights are from IKEA because they are cheap and easy to set up. Those devices are all connected with the IKEA TRÅDFRI bridge and then added to Home Assistant with the IKEA TRÅDFRI integration.</p>
+
+<h2 id="diy-lights">DIY lights</h2>
+
+<p>At my desk I use a LED stripe wich I integrated in Home Assistant with <a href="https://esphome.io">ESPHome</a>. The full explanation can be found in the section :ref:<code class="language-plaintext highlighter-rouge">led-stripe</code>.</p>
+
+<h2 id="light-alarm">Light alarm</h2>
+
+<p>In order to get the feeling of a sunrise when I have to wake up I created the following automation. About \(15\) minutes before my alarm clock gets of the light in my bedroom slowly aluminates until it’s at full brightness.
+I use a <code class="language-plaintext highlighter-rouge">input_datetime</code> so I’m able to easily change the wakeup time.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">input_datetime</span><span class="pi">:</span>
+<span class="na">wakeup_time_lukas</span><span class="pi">:</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Wecken</span><span class="nv"> </span><span class="s">um'</span>
+<span class="na">has_time</span><span class="pi">:</span> <span class="no">true</span>
+<span class="na">has_date</span><span class="pi">:</span> <span class="no">false</span>
+<span class="na">initial</span><span class="pi">:</span> <span class="s1">'</span><span class="s">06:45'</span>
+</code></pre></div></div>
+
+<p>The yaml-configuration for the automation looks like this:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1607003477556'</span>
+  <span class="na">alias</span><span class="pi">:</span> <span class="s">Lukas Wecker</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>
+  <span class="na">trigger</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">platform</span><span class="pi">:</span> <span class="s">template</span>
+      <span class="na">value_template</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>
+      <span class="na">condition</span><span class="pi">:</span> <span class="pi">[]</span>
+      <span class="na">action</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">service</span><span class="pi">:</span> <span class="s">light.turn_on</span>
+      <span class="na">data</span><span class="pi">:</span>
+      <span class="na">brightness</span><span class="pi">:</span> <span class="m">255</span>
+      <span class="na">color_temp</span><span class="pi">:</span> <span class="m">250</span>
+      <span class="na">transition</span><span class="pi">:</span> <span class="m">1200</span>
+      <span class="na">target</span><span class="pi">:</span>
+      <span class="na">entity_id</span><span class="pi">:</span> <span class="s">light.lukas_licht</span>
+    <span class="pi">-</span> <span class="na">service</span><span class="pi">:</span> <span class="s">climate.set_temperature</span>
+      <span class="na">data</span><span class="pi">:</span>
+      <span class="na">temperature</span><span class="pi">:</span> <span class="m">18</span>
+      <span class="na">entity_id</span><span class="pi">:</span> <span class="s">climate.eq3_schlafzimmer_lukas</span>
+      <span class="na">mode</span><span class="pi">:</span> <span class="s">single</span>
+</code></pre></div></div>
+:ET
