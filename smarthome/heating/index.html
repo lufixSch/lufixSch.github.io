@@ -396,6 +396,19 @@
     Radiator thermostat
   </a>
   
+    <nav class="md-nav" aria-label="Radiator thermostat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node-red" class="md-nav__link">
+    Node-Red
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -853,6 +866,19 @@
     Radiator thermostat
   </a>
   
+    <nav class="md-nav" aria-label="Radiator thermostat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node-red" class="md-nav__link">
+    Node-Red
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -884,20 +910,16 @@
                 
                 <h1 id="heating">Heating</h1>
 <h2 id="radiator-thermostat">Radiator thermostat</h2>
-<p>Because I live in a flat, there is no central heating system. Therefore I control every radiator over it's own thermostat. I went for the cheapest option: A set of <code>Eqiva Bluetooth Smart Radiator Thermostats &lt;https://www.amazon.de/-/en/Eqiva-Bluetooth®-Smart-Heizkörperthermostat-141771E0/dp/B01N39V0I4/ref=sr_1_1?dchild=1&amp;ie=UTF8&amp;keywords=blue%20heizkörperthermostat&amp;language=en_GB&amp;qid=1619821167&amp;sr=8-1&gt;</code>_.</p>
-<p>This devices are using bluetooth low energy therefore there is the need for at least one ESP32 to connect them to Home Assistant. For this purpose I used this really nice <code>EQ-3 Radiator valve control &lt;https://github.com/softypit/esp32_mqtt_eq3&gt;</code><em> application. In my case the thermostats had a very short BLE range with a maximum of about five meters. This is the main reason I choose the ESP32 solution instead of the <code>EQ3 Home Assistant integration &lt;https://www.home-assistant.io/integrations/eq3btsmart/&gt;</code></em>.</p>
-<p>Node-Red
-^^^^^^^^^^</p>
+<p>Because I live in a flat, there is no central heating system. Therefore I control every radiator over it's own thermostat. I went for the cheapest option: A set of <a href="https://www.amazon.de/-/en/Eqiva-Bluetooth®-Smart-Heizkörperthermostat-141771E0/dp/B01N39V0I4/ref=sr_1_1?dchild=1&amp;ie=UTF8&amp;keywords=blue%20heizkörperthermostat&amp;language=en_GB&amp;qid=1619821167&amp;sr=8-1">Eqiva Bluetooth Smart Radiator Thermostats</a>.</p>
+<p>This devices are using bluetooth low energy therefore there is the need for at least one ESP32 to connect them to Home Assistant. For this purpose I used this really nice <a href="https://github.com/softypit/esp32_mqtt_eq3">EQ-3 Radiator valve control</a> application. In my case the thermostats had a very short BLE range with a maximum of about five meters. This is the main reason I choose the ESP32 solution instead of the <a href="https://www.home-assistant.io/integrations/eq3btsmart/">EQ3 Home Assistant integration</a>.</p>
+<h3 id="node-red">Node-Red</h3>
 <p>To make the configuration of a MQTT climate device in Home Assistant as simple as possible I added a Node-Red layer.</p>
 <p>In this configuration I first created a MQTT topic for every radiator to set the temperature. But I also grouped the two thermostats in my livingroom so I can set both temperatures with one command. Next I added a topic to listen on changes of the climate mode. Depending on the mode I send a command to the radiator (mode = <em>off</em> =&gt; command = <strong>off</strong>, mode = <em>heat</em> =&gt; command = <strong>on</strong>, mode = <em>auto</em> =&gt; command = <strong>settemp 20.0</strong>).</p>
-<p>.. figure:: assets/thermostat_mode_detection.png
-:alt: Picture of the Node-Red Subflow for Modedetection</p>
+<p><img alt="Picture of the Node-Red Subflow for Modedetection" src="../assets/thermostat_mode_detection.png" /></p>
 <p>When one of my radiators returns a statusmessage on <code>/&lt;mqttid&gt;radout/status</code> I resolve battery as well as temperature of the device and send it over a new topic. As a third value I generate the mode depending on the temperature (:math:<code>temp == 4.5</code> =&gt; <em>off</em>, :math:<code>temp == 30.0</code> =&gt; <em>heat</em>, :math:<code>4.5 &lt; temp &lt; 30.0</code> =&gt; <em>auto</em>).</p>
-<p>.. figure:: assets/thermostat_config_node_red.png
-:alt: Picture of the Node-Red Configuration</p>
-<p>All my Node-Red Flows can be found on GitHub</p>
+<p><img alt="Picture of the Node-Red Configuration" src="../assets/thermostat_config_node_red.png" /></p>
 <h2 id="temperature-sensor">Temperature sensor</h2>
-<p>As temperature and humidity sensors I'm using some <code>Xiaomi Mija Bluetooth Thermometer &lt;https://de.aliexpress.com/item/4000373039226.html?spm=a2g0o.productlist.0.0.e1857c3fSzGao3&amp;algo_pvid=b51a18c3-9ccf-4b9a-b9d0-d6b49b2ddc36&amp;algo_expid=b51a18c3-9ccf-4b9a-b9d0-d6b49b2ddc36-0&amp;btsid=0bb0623d16200470086374093ef357&amp;ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_&gt;</code><em>. Just like the thermostats a ESP32 is needed but in this case ESPHome provides a <code>viable solution &lt;https://esphome.io/components/sensor/xiaomi_ble.html?highlight=xiaomi#lywsd03mmc&gt;</code></em>. To use the sensors with ESPHome you need to flash a custom firmware like explained in this repository: <code>&lt;https://github.com/atc1441/ATC_MiThermometer&gt;</code>_. Now you can flash your ESP32 with your ESPHome configuration and the sensors are ready. To later use them as temperature for the MQTT climate entity I also added MQTT to the ESPHome configuration.</p>
+<p>As temperature and humidity sensors I'm using some <a href="https://de.aliexpress.com/item/4000373039226.html?spm=a2g0o.productlist.0.0.e1857c3fSzGao3&amp;algo_pvid=b51a18c3-9ccf-4b9a-b9d0-d6b49b2ddc36&amp;algo_expid=b51a18c3-9ccf-4b9a-b9d0-d6b49b2ddc36-0&amp;btsid=0bb0623d16200470086374093ef357&amp;ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603">Xiaomi Mija Bluetooth Thermometer</a>. Just like the thermostats a ESP32 is needed but in this case ESPHome provides a <a href="https://esphome.io/components/sensor/xiaomi_ble.html?highlight=xiaomi#lywsd03mmc">viable solution</a>. To use the sensors with ESPHome you need to flash a custom firmware like explained in this repository: <a href="https://github.com/atc1441/ATC_MiThermometer">https://github.com/atc1441/ATC_MiThermometer</a>. Now you can flash your ESP32 with your ESPHome configuration and the sensors are ready. To later use them as temperature for the MQTT climate entity I also added MQTT to the ESPHome configuration.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">mqtt</span><span class="p">:</span>
   <span class="nt">broker</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;mqtt broker ip&gt;</span>
   <span class="nt">username</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;username&gt;</span>
@@ -935,9 +957,7 @@
   <span class="nt">temp_step</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.5</span>
 </code></pre></div>
 <p>Now when I set the temperature of my radiator in Home Assistant the target temperature of the EQ3 thermostat changes (<code>temperature_command_topic: "heating/bedroom_lukas/temp"</code>). So the whole controlling of the radiator still happens on the EQ3 with it's build in temperature sensor but the entity in Home Assistant displays the temperature measured by the Xiaomi sensors (<code>"current_temperature_topic: "thermometer/temperature/bedroom-lukas"</code>).</p>
-<p>.. figure:: ./assets/hassio_thermostat_card.png
-:alt: Thermostat card in Home Assistant
-:figwidth: 500</p>
+<p><img alt="Thremostat card in Home Assistant" src="../assets/hassio_thermostat_card.png" width="500" /></p>
                 
               
               
