@@ -1,0 +1,62 @@
+site_name: LufixSch Homepage
+site_author: LufixSch
+site_url: https://lufixsch.github.io
+
+nav:
+  - Welcome: index.md
+  - Smarthome:
+      - Home: smarthome/index.md
+      - Lights: smarthome/lights.md
+      - Heating: smarthome/heating.md
+      - Desk: smarthome/desk.md
+      - Audiosystem: smarthome/audiosystem.md
+  - Guides:
+      - Latex:
+          - Basics: guides/Latex/Basics.md
+          - Distro: guides/Latex/Distro.md
+          - Document: guides/Latex/Document.md
+          - Editor: guides/Latex/Editor.md
+      - Linux:
+          - Docker storage location: guides/Linux/Docker storage location.md
+      - Microcontroller:
+          - Flash Sonoff device: guides/Microcontroller/Flash Sonoff Device.md
+      - Raspberry Pi:
+          - GitLab in Docker: guides/Raspberry Pi/GitLab in Docker on Pi.md
+          - Boot from SSD: guides/Raspberry Pi/Raspberry boot from SSD.md
+          - VNC on Raspbian: guides/Raspberry Pi/Raspbian with vnc.md
+          - Reduce Powerconsumption: guides/Raspberry Pi/Reduce Powerconsumption.md
+  - Templates:
+      - Latex Protocol: temp/latex_protocol.md
+      - Meeting Protocol: temp/meeting_protocol.md
+
+theme:
+  name: material
+  language: en
+  logo: assets/icon.png
+  favicon: assets/icon.png
+  features:
+    - navigation.tabs
+    - navigation.top
+  palette:
+    - scheme: slate
+      primary: deep purple
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+    - scheme: default
+      primary: deep purple
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.highlight
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
