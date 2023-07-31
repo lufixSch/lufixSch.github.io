@@ -16,4 +16,6 @@
 </script>
 
 <Navbar />
-<slot />
+<body class="mt-14">
+	<slot />
+</body>
