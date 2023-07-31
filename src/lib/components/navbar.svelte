@@ -7,6 +7,7 @@
 	const routes = [
 		{ path: '/projects', name: 'Projects' },
 		{ path: '/guides', name: 'Guides' },
+		{ path: '/templates', name: 'Templates' },
 		{ path: '/updates', name: 'Updates' }
 	];
 </script>
@@ -25,7 +26,9 @@
 		<ul class="hidden sm:flex flex-row">
 			{#each routes as route}
 				<li>
-					<a class:active={$page.url.pathname === route.path} href={route.path}>{route.name}</a>
+					<a class:active={$page.url.pathname.includes(route.path)} href={route.path}
+						>{route.name}</a
+					>
 				</li>
 			{/each}
 		</ul>
