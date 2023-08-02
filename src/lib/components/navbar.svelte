@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { theme } from './stores';
+	import { theme } from '../stores';
 
 	let open_menu = false;
 

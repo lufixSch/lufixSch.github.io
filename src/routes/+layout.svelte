@@ -2,7 +2,7 @@
 	import Navbar from '../lib/components/navbar.svelte';
 	import '../app.postcss';
 
-	import { theme } from '$lib/components/stores';
+	import { theme } from '$lib/stores';
 	import { onMount } from 'svelte';
 
 	onMount(() => {
