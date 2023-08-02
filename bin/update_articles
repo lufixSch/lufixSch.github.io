@@ -1,0 +1,80 @@
+#!/usr/bin/env python3
+
+"""
+Load all .md files in the src directory. If an update link is provided in
+the front matter, update the content of the file with the content of the link.
+"""
+
+import frontmatter as fr
+
+from typing import Iterable
+
+import os
+from os import walk
+from argparse import ArgumentParser
+from requests import get
+
+
+def find_articles(base_path: str):
+    """
+    Find all .md files in the src directory and subdirectories.
+    Return a list of paths to the files.
+    """
+
+    return (
+        os.path.join(dirpath, filename)
+        for (dirpath, _, filenames) in walk(base_path)
+        for filename in filenames
+        if filename.endswith(".md")
+    )
+
+
+def filter_articles(articles: Iterable[str]):
+    """
+    Filter the list of articles to only those with an update link.
+    """
+
+    for article in articles:
+        frontmatter = fr.load(article)
+
+        if "update" in frontmatter.keys():
+            yield (article, str(frontmatter["update"]))
+
+
+def pull_updates(articles: Iterable[tuple[str, str]]):
+    """
+    Pull the content from the update link
+    """
+
+    return ((path, get(link).text) for (path, link) in articles)
+
+
+def replace_content(articles: Iterable[tuple[str, str]]):
+    """
+    Replace the content of the article with the content of the update link
+    """
+
+    for path, content in articles:
+        with open(path, "r+") as f:
+            print(f"Updating {path}")
+
+            old_content = f.read()
+            frontmatter = old_content.split("---")[1]
+
+            f.seek(0)
+            f.write(f"---{frontmatter}---\n\n{content}")
+
+
+if __name__ == "__main__":
+    parser = ArgumentParser()
+    parser.add_argument("--base_path", type=str, default="src")
+    args = parser.parse_args()
+
+    print(f"Updating articles in {args.base_path}")
+
+    paths = find_articles(args.base_path)
+    update_paths = filter_articles(paths)
+    updates = pull_updates(update_paths)
+    replace_content(updates)
+
+    print("Done!")
