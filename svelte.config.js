@@ -2,6 +2,7 @@ import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 
 import { mdsvex } from 'mdsvex';
+import highlighter from './src/lib/util/codeHighlighter.mjs';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -12,7 +13,12 @@ const config = {
 		mdsvex({
 			extensions: ['.md'],
 			layout: {
-				_: 'src/lib/layouts/article.svelte'
+				_: 'src/lib/layouts/default.svelte',
+				article: 'src/lib/layouts/article.svelte',
+				error: 'src/lib/layouts/error.svelte'
+			},
+			highlight: {
+				highlighter
 			}
 		}),
 		vitePreprocess()

@@ -3,7 +3,6 @@ title: "Bachelor Thesis"
 layout: "article"
 image: Null
 repository: "https://github.com/lufixSch/sound-laser.git"
-repository_name: lufixSch/sound-laser
 repository_icon: github
 status: 'finished'
 update: https://raw.githubusercontent.com/lufixSch/sound-laser/master/README.md

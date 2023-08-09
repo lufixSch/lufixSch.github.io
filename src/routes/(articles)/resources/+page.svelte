@@ -5,9 +5,9 @@
 	const { articles } = data;
 </script>
 
-<h2>Updates</h2>
+<h2>Resources</h2>
 <p class="mb-2 pb-2 border-b-2">
-	If you're interested in what I'm up to, I post updates here. At the moment I am not sure how often
-	this will be.
+	This section contains all the resources I have created. This includes templates, formula sheets,
+	and some guides. I hope you find them useful.
 </p>
 <Index {articles} />

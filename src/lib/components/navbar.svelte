@@ -6,8 +6,7 @@
 
 	const routes = [
 		{ path: '/projects', name: 'Projects' },
-		{ path: '/guides', name: 'Guides' },
-		{ path: '/templates', name: 'Templates' },
+		{ path: '/resources', name: 'Resources' },
 		{ path: '/updates', name: 'Updates' }
 	];
 </script>

@@ -6,17 +6,10 @@ export function loadArticles(
 ) {
 	return Promise.all(
 		Object.keys(mdPages).map(async (path) => {
-			const slug = path.replace('+page.md', '').replace('./', prefix ? `/${prefix}/` : '/');
+			const slug = path.replace('/+page.md', '').replace('./', prefix ? `/${prefix}/` : '/');
+			const { metadata } = (await mdPages[path]()) as { metadata: mdMetaData };
 
-			let title: string;
-			try {
-				const { metadata } = (await mdPages[path]()) as { metadata: mdMetaData };
-				title = metadata.title;
-			} catch {
-				title = slug.split('/').pop() as string;
-			}
-
-			return { slug, title };
+			return { slug, metadata };
 		})
 	);
 }
