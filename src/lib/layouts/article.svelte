@@ -1,14 +1,34 @@
-<script lang="ts">
+<script>
 	import '$lib/styles/code.postcss';
 	import '@fontsource/ibm-plex-mono/latin.css';
 
 	import SourceCard from '$lib/components/source_card.svelte';
-	import type { ProjectStatus, RepoType } from '$lib/types';
 
-	export let repository: string;
-	export let repository_icon: RepoType;
-	export let status: ProjectStatus;
+	/**
+	 * @type {string}
+	 */
+	export let title;
+
+	/**
+	 * @type {string}
+	 */
+	export let repository;
+
+	/**
+	 * @type {import('$lib/types').RepoType}
+	 */
+	export let repository_icon;
+
+	/**
+	 * @type {import('$lib/types').ProjectStatus}
+	 */
+	export let status;
 </script>
+
+<svelte:head>
+	<title>{title}</title>
+	<meta property="og:title" content={title} />
+</svelte:head>
 
 <section
 	id="header"

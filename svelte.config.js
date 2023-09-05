@@ -14,8 +14,8 @@ const config = {
 			extensions: ['.md'],
 			layout: {
 				_: 'src/lib/layouts/default.svelte',
+				project: 'src/lib/layouts/article.svelte',
 				article: 'src/lib/layouts/article.svelte',
-				project: 'src/lib/layouts/project.svelte',
 				error: 'src/lib/layouts/error.svelte'
 			},
 			highlight: {

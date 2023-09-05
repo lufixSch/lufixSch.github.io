@@ -1,3 +1,8 @@
+<svelte:head>
+	<title>Lukas' Homepage</title>
+	<meta name="description" content="Lukas' Homepage containing his projects and guides." />
+</svelte:head>
+
 <section id="about-me" class="p-8 md:p-12 lg:p-24 overflow-y-scroll">
 	<h2>Hi there!</h2>
 	<h6>
