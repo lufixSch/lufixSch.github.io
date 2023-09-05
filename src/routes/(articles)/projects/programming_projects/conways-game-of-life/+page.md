@@ -1,6 +1,6 @@
 ---
 title: "Conways game of life"
-layout: "article"
+layout: "project"
 image: Null
 repository: "https://github.com/lufixSch/conways-game-of-life.git"
 repository_icon: github

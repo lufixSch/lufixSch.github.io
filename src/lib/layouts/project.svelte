@@ -1,9 +1,8 @@
 <script lang="ts">
-	import '$lib/styles/code.postcss';
-	import '@fontsource/ibm-plex-mono/latin.css';
-
 	import SourceCard from '$lib/components/source_card.svelte';
+	import '$lib/styles/code.postcss';
 	import type { ProjectStatus, RepoType } from '$lib/types';
+	import '@fontsource/ibm-plex-mono/latin.css';
 
 	export let repository: string;
 	export let repository_icon: RepoType;

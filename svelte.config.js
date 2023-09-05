@@ -15,6 +15,7 @@ const config = {
 			layout: {
 				_: 'src/lib/layouts/default.svelte',
 				article: 'src/lib/layouts/article.svelte',
+				project: 'src/lib/layouts/project.svelte',
 				error: 'src/lib/layouts/error.svelte'
 			},
 			highlight: {

@@ -1,6 +1,6 @@
 ---
 title: "Hunter and Prey"
-layout: "article"
+layout: "project"
 image: Null
 repository: "https://github.com/lufixSch/hunter_and_prey.git"
 repository_icon: github

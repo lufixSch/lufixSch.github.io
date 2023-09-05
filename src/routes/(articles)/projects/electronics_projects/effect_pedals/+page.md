@@ -1,6 +1,6 @@
 ---
 title: "Effect Pedals"
-layout: "article"
+layout: "project"
 image: Null
 repository: "https://github.com/lufixSch/effect-pedals.git"
 repository_icon: github

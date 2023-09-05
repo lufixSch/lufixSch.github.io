@@ -1,6 +1,6 @@
 ---
 title: "Firefly III Import"
-layout: "article"
+layout: "project"
 image: Null
 repository: "https://github.com/lufixSch/firefly-iii-import.git"
 repository_icon: github

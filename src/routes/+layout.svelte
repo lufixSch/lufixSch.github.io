@@ -4,6 +4,7 @@
 
 	import { theme } from '$lib/stores';
 	import { onMount } from 'svelte';
+	import Footer from '$lib/components/footer.svelte';
 
 	onMount(() => {
 		// Listen for changes to the 'prefers-color-scheme' media query and update the theme
@@ -16,6 +17,9 @@
 </script>
 
 <Navbar />
-<body class="mt-14">
-	<slot />
-</body>
+<div class="min-h-screen flex flex-col justify-between">
+	<body class="">
+		<slot />
+	</body>
+	<Footer />
+</div>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { mdMetaData } from '$lib/types';
+	import IndexItem from './index_item.svelte';
 
 	export let articles: {
 		metadata: mdMetaData;
@@ -13,15 +14,9 @@
 
 <ul>
 	{#each articles as article}
-		<li>
+		<IndexItem slug={article.slug}>
 			{#if article.metadata?.header}
-				{#if indent(article.slug) < 1}
-					<h4 style="margin-left: {indent(article.slug) * 8}px;">{article.metadata.title}</h4>
-				{:else if indent(article.slug) < 2}
-					<h5 style="margin-left: {indent(article.slug) * 8}px;">{article.metadata.title}</h5>
-				{:else}
-					<h6 style="margin-left: {indent(article.slug) * 8}px;">{article.metadata.title}</h6>
-				{/if}
+				{article.metadata.title}
 			{:else}
 				<a
 					class="hover:text-primary dark:hover:text-primary-dark"
@@ -29,6 +24,6 @@
 					href={article.slug}>{article.metadata.title}</a
 				>
 			{/if}
-		</li>
+		</IndexItem>
 	{/each}
 </ul>

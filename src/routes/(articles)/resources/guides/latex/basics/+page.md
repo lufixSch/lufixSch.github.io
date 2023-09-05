@@ -1,5 +1,5 @@
 ---
-title: "Latex"
+title: "Basics"
 layout: "article"
 image: Null
 repository: "https://github.com/lufixSch/guides.git"

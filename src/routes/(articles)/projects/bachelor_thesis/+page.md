@@ -1,6 +1,6 @@
 ---
 title: "Bachelor Thesis"
-layout: "article"
+layout: "project"
 image: Null
 repository: "https://github.com/lufixSch/sound-laser.git"
 repository_icon: github

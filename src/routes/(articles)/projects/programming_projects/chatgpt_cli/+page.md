@@ -1,6 +1,6 @@
 ---
 title: "ChatGPT CLI"
-layout: "article"
+layout: "project"
 image: Null
 repository: "https://github.com/lufixSch/chatgpt_cli.git"
 repository_icon: github

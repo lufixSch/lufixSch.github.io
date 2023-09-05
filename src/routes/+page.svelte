@@ -1,4 +1,4 @@
-<section id="about-me" class="p-12 md:pt-24 lg:pt-32">
+<section id="about-me" class="p-8 md:p-12 lg:p-24 overflow-y-scroll">
 	<h2>Hi there!</h2>
 	<h6>
 		I'm Lukas, a tech enthusiast with a passion for creating innovative electronic and software
