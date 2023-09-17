@@ -1,10 +1,12 @@
 ---
-title: "Hunter and Prey"
-layout: "project"
-image: Null
-repository: "https://github.com/lufixSch/hunter_and_prey.git"
+description: Hunter and Prey is a 2D game where two competing neural networks, the
+  hunter and the prey, try to survive.
+image: null
+layout: project
+repository: https://github.com/lufixSch/hunter_and_prey.git
 repository_icon: github
 status: stalled
+title: Hunter and Prey
 update: https://raw.githubusercontent.com/lufixSch/hunter_and_prey/main/README.md
 ---
 

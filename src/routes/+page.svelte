@@ -16,7 +16,9 @@
 	</h6>
 </section>
 
-<section id="projects" />
+<section id="projects">
+	
+</section>
 
 <section id="guides" />
 

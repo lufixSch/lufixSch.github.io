@@ -1,10 +1,18 @@
 ---
-title: "Reduce Powerconsumption"
-layout: "article"
-image: Null
-repository: "https://github.com/lufixSch/guides.git"
+description: 'Energy consumption reduction for Raspberry Pi
+
+
+  General:
+
+  - Reduce power usage by disabling HDMI output ($25mA)
+
+  - Reduce power usage by disabling USB ports ($>50mA'
+image: null
+layout: article
+repository: https://github.com/lufixSch/guides.git
 repository_icon: github
 status: finished
+title: Reduce Powerconsumption
 update: https://raw.githubusercontent.com/lufixSch/guides/main/Raspberry%20Pi/Reduce%20Powerconsumption.md
 ---
 
@@ -68,19 +76,6 @@ $ echo gpio | sudo tee /sys/class/leds/led1/trigger
 #led0 => Stauts led green
 $ echo mmc0 | sudo tee /sys/class/leds/led0/trigger
 $ echo input | sudo tee /sys/class/leds/led1/trigger
-
-```
-
-### Raspberry Pi Zero W
-
-Der Raspberry Pi Zero besitzt nur eine LED, welche wie folgt deaktiviert werden kann:
-
-```sh
-# Disable the ACT LED on the Pi Zero.
-dtparam=act_led_trigger=none
-dtparam=act_led_activelow=on
-```
-d1/trigger
 
 ```
 

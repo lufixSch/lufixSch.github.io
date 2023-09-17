@@ -1,10 +1,11 @@
 ---
-title: "VNC on Raspbian"
-layout: "article"
-image: Null
-repository: "https://github.com/lufixSch/guides.git"
+description: Raspberry VNC Setup - Setup guide for a VNC server on a Raspberry Pi
+image: null
+layout: article
+repository: https://github.com/lufixSch/guides.git
 repository_icon: github
 status: finished
+title: VNC on Raspbian
 update: https://raw.githubusercontent.com/lufixSch/guides/main/Raspberry%20Pi/Raspbian%20with%20vnc.md
 ---
 
@@ -68,4 +69,3 @@ New desktop is raspberry:1 (192.168.178.61:1)
 ### GUI ändern alternative
 
 Siehe [hier](https://forum-raspberrypi.de/forum/thread/48950-tutorial-eine-unendliche-geschichte-raspberry-4b-und-usb-boot/?postID=453256#post453256)
-//forum-raspberrypi.de/forum/thread/48950-tutorial-eine-unendliche-geschichte-raspberry-4b-und-usb-boot/?postID=453256#post453256)

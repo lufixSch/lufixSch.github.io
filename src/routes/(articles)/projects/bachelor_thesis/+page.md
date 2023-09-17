@@ -1,10 +1,11 @@
 ---
-title: "Bachelor Thesis"
-layout: "project"
-image: Null
-repository: "https://github.com/lufixSch/sound-laser.git"
+description: Sound Laser - Bachelor Thesis about Parametric Speakers
+image: null
+layout: project
+repository: https://github.com/lufixSch/sound-laser.git
 repository_icon: github
-status: 'finished'
+status: finished
+title: Bachelor Thesis
 update: https://raw.githubusercontent.com/lufixSch/sound-laser/master/README.md
 ---
 

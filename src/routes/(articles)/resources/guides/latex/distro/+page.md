@@ -1,10 +1,15 @@
 ---
-title: "Distro"
-layout: "article"
-image: Null
-repository: "https://github.com/lufixSch/guides.git"
+description: 'Latex Distro - Setup Guide
+
+
+  This guide explains how to install and set up different LaTeX distributions, focusing
+  on MikTeX and TeXLive.'
+image: null
+layout: article
+repository: https://github.com/lufixSch/guides.git
 repository_icon: github
 status: finished
+title: Distro
 update: https://raw.github.com/lufixSch/guides/main/Latex/Distro.md
 ---
 
@@ -27,6 +32,4 @@ Für die Installation von TexLive kannst du der Anleitung auf der [Herstellerweb
 
 Perl ist auf Unix Betriebssystemen (Linux, MacOS) in der Regel schon installiert. Für Windows kann Strawberry Perl von der [Herstellerwebsite](https://strawberryperl.com) runtergeladen werden.
 Nach der Installation sollte sichergestellt werden, dass der Pfad zu Perl in der `PATH` Variable hinterlegt wurde. Normalerweise liegt Perl hier: `C:\Strawberry\perl\bin`
-Damit Perl in Visual Studio Code erkannt wird muss der Computer möglicherweise neu gestartet werden.
-rry\perl\bin`
 Damit Perl in Visual Studio Code erkannt wird muss der Computer möglicherweise neu gestartet werden.

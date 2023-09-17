@@ -1,5 +1,6 @@
 import type { mdMetaData } from './types';
 
+
 export function loadArticles(
 	mdPages: Record<string, () => Promise<unknown>>,
 	prefix: string | null = null
@@ -13,3 +14,4 @@ export function loadArticles(
 		})
 	);
 }
+

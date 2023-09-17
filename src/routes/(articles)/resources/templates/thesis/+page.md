@@ -1,10 +1,12 @@
 ---
-title: "Thesis"
-layout: "article"
-image: Null
-repository: "https://github.com/lufixSch/thesis_template.git"
+description: A LaTeX template for creating a bachelor or master thesis. Includes a
+  setup script and predefined device list.
+image: null
+layout: article
+repository: https://github.com/lufixSch/thesis_template.git
 repository_icon: github
 status: finished
+title: Thesis
 update: https://raw.github.com/lufixSch/thesis_template/main/README.md
 ---
 

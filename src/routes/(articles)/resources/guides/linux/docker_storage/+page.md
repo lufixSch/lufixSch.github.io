@@ -1,10 +1,20 @@
 ---
-title: "Docker storage location"
-layout: "article"
-image: Null
-repository: "https://github.com/lufixSch/guides.git"
+description: 'Change the location of Docker images
+
+
+  Guide from [here](https://evodify.com/change-docker-storage-location/)
+
+
+  Editing configuration
+
+
+  Create the file `/etc/docker/daemon.json`'
+image: null
+layout: article
+repository: https://github.com/lufixSch/guides.git
 repository_icon: github
 status: finished
+title: Docker storage location
 update: https://raw.githubusercontent.com/lufixSch/guides/main/Linux/Docker%20storage%20location.md
 ---
 
@@ -34,17 +44,6 @@ sudo systemctl restart docker
 
 Als nächstes müssen alte Container von dem alten zum neuen Speicherort bewegt werde.
 Dazu werden alle Container gelöscht:
-
-```bash
-docker system prune -a
-```
-
-Und wieder heruntergeladen werden:
-
-```bash
-docker pull <container-name>
-```
- alle Container gelöscht:
 
 ```bash
 docker system prune -a

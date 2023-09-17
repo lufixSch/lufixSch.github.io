@@ -1,10 +1,13 @@
 ---
-title: "Firefly III Import"
-layout: "project"
-image: Null
-repository: "https://github.com/lufixSch/firefly-iii-import.git"
+description: This project is intended to help users import their bank transactions
+  into Firefly III. It supports multiple bank accounts and provides a simple command
+  line interface as well as a python module for integration into larger projects.
+image: null
+layout: project
+repository: https://github.com/lufixSch/firefly-iii-import.git
 repository_icon: github
 status: stalled
+title: Firefly III Import
 update: https://raw.githubusercontent.com/lufixSch/firefly-iii-import/main/README.md
 ---
 
@@ -257,4 +260,3 @@ The easiest workaround is to use Firefly III rules to change or delete those tra
 ### N26 Transaction limit
 
 When loading transactions from a N26 account the API requires to limit the number of transactions to load. In the `N26Loader` this limit is set to `10000` which should be enough for most imports but you should be aware of this limit.
-it.

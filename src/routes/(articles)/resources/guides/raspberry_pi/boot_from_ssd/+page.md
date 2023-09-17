@@ -1,10 +1,16 @@
 ---
-title: "Boot from SSD"
-layout: "article"
-image: Null
-repository: "https://github.com/lufixSch/guides.git"
+description: 'This is a guide on how to setup your Raspberry Pi 4 to boot from an
+  external USB device or SSD.
+
+
+  The goal of this documentation is to provide a step-by-step guide on how to configure
+  your R'
+image: null
+layout: article
+repository: https://github.com/lufixSch/guides.git
 repository_icon: github
 status: finished
+title: Boot from SSD
 update: https://raw.githubusercontent.com/lufixSch/guides/main/Raspberry%20Pi/Raspberry%20boot%20from%20SSD.md
 ---
 
@@ -142,4 +148,3 @@ Ab Juni gab es ein Beta-USB-rpi-boot-eeprom-recovery und mittlerweile seit Ende 
 
 Dieses wird auf eine Fat32 formatierte mSD entpackt, in den Raspi 4 damit und Spannungsversorgung einschalten.
 Blinkt die grüne LED dann gleichmäßig schnell hintereinander ist das recovery beendet und man kann ganz ohne Umweg über eine mSD Karte gleich auf die Festplatte/ SSD / USB oder was auch immer sein BS Flashen, anstecken und es bootet.
-und man kann ganz ohne Umweg über eine mSD Karte gleich auf die Festplatte/ SSD / USB oder was auch immer sein BS Flashen, anstecken und es bootet.

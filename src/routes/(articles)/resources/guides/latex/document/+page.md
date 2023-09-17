@@ -1,10 +1,16 @@
 ---
-title: "Document"
-layout: "article"
-image: Null
-repository: "https://github.com/lufixSch/guides.git"
+description: 'Latex Dokument
+
+
+  The main goal of this project is to provide a framework for creating documents using
+  LaTeX. This includes support for various document types like scientific papers,
+  books, and presentations. The project also provides tools for formatting text,'
+image: null
+layout: article
+repository: https://github.com/lufixSch/guides.git
 repository_icon: github
 status: finished
+title: Document
 update: https://raw.githubusercontent.com/lufixSch/guides/main/Latex/Document.md
 ---
 
@@ -170,5 +176,4 @@ Diese Variante benötigt das Paket `\usepackage{tabularx}`
   - `|`: Trennlinie
 - `&`: Aufteilen des Textes in die einzelnen Spalten
 - `\\`: Neue Zeile
-- `\label{tab:bezeichnung}`: Ermöglicht das Referenzieren des Bildes im Text mit `\ref{tab:bezeichnung}`}`: Neue Zeile
 - `\label{tab:bezeichnung}`: Ermöglicht das Referenzieren des Bildes im Text mit `\ref{tab:bezeichnung}`}

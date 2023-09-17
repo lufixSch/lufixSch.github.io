@@ -1,10 +1,13 @@
 ---
-title: "ChatGPT CLI"
-layout: "project"
-image: Null
-repository: "https://github.com/lufixSch/chatgpt_cli.git"
+description: ChatGPT Cli is a command-line interface that allows users to interact
+  with ChatGPT using simple commands. It provides a more efficient way to communicate
+  with the AI model, making it ideal for developers and users who prefer
+image: null
+layout: project
+repository: https://github.com/lufixSch/chatgpt_cli.git
 repository_icon: github
 status: finished
+title: ChatGPT CLI
 update: https://raw.github.com/lufixSch/chatgpt_cli/main/README.md
 ---
 

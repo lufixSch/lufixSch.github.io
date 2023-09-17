@@ -1,10 +1,13 @@
 ---
-title: "Report"
-layout: "article"
-image: Null
-repository: "https://github.com/lufixSch/protokoll_vorlage.git"
+description: Latex Protocol Template is a template for lab protocols, especially designed
+  for the FH-JOANNEUM. It provides a structure for setting up a lab protocol and includes
+  a predefined list of devices that can be
+image: null
+layout: article
+repository: https://github.com/lufixSch/protokoll_vorlage.git
 repository_icon: github
 status: finished
+title: Report
 update: https://raw.githubusercontent.com/lufixSch/protokoll_vorlage/master/README.md
 ---
 

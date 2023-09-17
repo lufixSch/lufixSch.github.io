@@ -1,10 +1,18 @@
 ---
-title: "Basics"
-layout: "article"
-image: Null
-repository: "https://github.com/lufixSch/guides.git"
+description: 'Latex Getting Started - Guide to setting up Latex and editing your first
+  document
+
+
+  Introduction
+
+  To use Latex, you need two things: An editor and a distro ("compiler"). With the
+  editor, you can edit the'
+image: null
+layout: article
+repository: https://github.com/lufixSch/guides.git
 repository_icon: github
 status: finished
+title: Basics
 update: https://raw.github.com/lufixSch/guides/main/Latex/Basics.md
 ---
 
@@ -19,11 +27,6 @@ Um Latex verwenden zu können, brauchst du zwei Dinge: Einen Editor und einen Di
 ## Latex Distro
 
 Wie du eine Latex Distribution einrichtest findest du [hier](distro)
-
-## Latex Editor
-
-Wie du einen Latex Editor aufsetzt findest du [hier](editor)
-est du [hier](distro)
 
 ## Latex Editor
 

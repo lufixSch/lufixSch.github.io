@@ -1,10 +1,13 @@
 ---
-title: "Editor"
-layout: "article"
-image: Null
-repository: "https://github.com/lufixSch/guides.git"
+description: In diesem Guide wird Visual Studio Code als Texteditor für die Arbeit
+  mit LaTeX vorgestellt. Der Guide zeigt, wie man die notwendigen Erweiterungen installieren
+  und konfigurieren muss, um eine effiziente Entwicklung
+image: null
+layout: article
+repository: https://github.com/lufixSch/guides.git
 repository_icon: github
 status: finished
+title: Editor
 update: https://raw.github.com/lufixSch/guides/main/Latex/Editor.md
 ---
 
@@ -144,10 +147,6 @@ Mit `latexmk` als Compiler
   "editor.defaultFormatter": "James-Yu.latex-workshop"
 },
 "latex-workshop.latex.outDir": "%DIR%/build",
-"latex-utilities.message.update.show": false,
-"latex-workshop.message.update.show": false,
-```
-Dir": "%DIR%/build",
 "latex-utilities.message.update.show": false,
 "latex-workshop.message.update.show": false,
 ```
