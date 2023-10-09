@@ -21,8 +21,10 @@
 				<a
 					class="hover:text-primary dark:hover:text-primary-dark"
 					style="margin-left: {indent(article.slug) * 8}px;"
-					href={article.slug}>{article.metadata.title}</a
-				>
+					href={article.slug}
+					title={article.metadata.description}
+					>{article.metadata.title}
+				</a>
 			{/if}
 		</IndexItem>
 	{/each}
