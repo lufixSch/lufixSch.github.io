@@ -1,8 +1,8 @@
 ---
-description: "Automatic bank transaction import tool for Firefly III"
+description: Automatic bank transaction import tool for Firefly III
 image: /articles/pcb_buttons.png
 layout: project
-repository: https://github.com/lufixSch/firefly-iii-import.git
+repository: https://github.com/lufixSch/firefly-iii-import
 repository_icon: github
 status: stalled
 title: Firefly III Import
@@ -13,23 +13,23 @@ update: https://raw.githubusercontent.com/lufixSch/firefly-iii-import/main/READM
 
 Python programm/library for automatic import of transactions from different bankaccounts into Firefly III.
 
-- [Firefly III bank import](#firefly-iii-bank-import)
-  - [Supported Banks](#supported-banks)
-    - [Extend Bank support](#extend-bank-support)
-  - [Config](#config)
-    - [Firefly](#firefly)
-    - [Banks](#banks)
-      - [N26](#n26)
-  - [CLI](#cli)
-  - [Python Module](#python-module)
-    - [Config](#config-1)
-    - [FireflyAPI](#fireflyapi)
-    - [Loader](#loader)
-    - [Importer](#importer)
-  - [Known Issues](#known-issues)
-    - [Timezones](#timezones)
-    - [Transactions between N26 spaces](#transactions-between-n26-spaces)
-    - [N26 Transaction limit](#n26-transaction-limit)
+- [Firefly III bank import](https://github.com/lufixSch/firefly-iii-import/blob/main/#firefly-iii-bank-import)
+  - [Supported Banks](https://github.com/lufixSch/firefly-iii-import/blob/main/#supported-banks)
+    - [Extend Bank support](https://github.com/lufixSch/firefly-iii-import/blob/main/#extend-bank-support)
+  - [Config](https://github.com/lufixSch/firefly-iii-import/blob/main/#config)
+    - [Firefly](https://github.com/lufixSch/firefly-iii-import/blob/main/#firefly)
+    - [Banks](https://github.com/lufixSch/firefly-iii-import/blob/main/#banks)
+      - [N26](https://github.com/lufixSch/firefly-iii-import/blob/main/#n26)
+  - [CLI](https://github.com/lufixSch/firefly-iii-import/blob/main/#cli)
+  - [Python Module](https://github.com/lufixSch/firefly-iii-import/blob/main/#python-module)
+    - [Config](https://github.com/lufixSch/firefly-iii-import/blob/main/#config-1)
+    - [FireflyAPI](https://github.com/lufixSch/firefly-iii-import/blob/main/#fireflyapi)
+    - [Loader](https://github.com/lufixSch/firefly-iii-import/blob/main/#loader)
+    - [Importer](https://github.com/lufixSch/firefly-iii-import/blob/main/#importer)
+  - [Known Issues](https://github.com/lufixSch/firefly-iii-import/blob/main/#known-issues)
+    - [Timezones](https://github.com/lufixSch/firefly-iii-import/blob/main/#timezones)
+    - [Transactions between N26 spaces](https://github.com/lufixSch/firefly-iii-import/blob/main/#transactions-between-n26-spaces)
+    - [N26 Transaction limit](https://github.com/lufixSch/firefly-iii-import/blob/main/#n26-transaction-limit)
 
 ## Supported Banks
 
@@ -40,7 +40,7 @@ Python programm/library for automatic import of transactions from different bank
 
 ### Extend Bank support
 
-If you want to create support for a new bank account you need to create a new loader class as well as a new config class for this type of account (See [Python Module](#python-module) for a complete explanation of the class structure).
+If you want to create support for a new bank account you need to create a new loader class as well as a new config class for this type of account (See [Python Module](https://github.com/lufixSch/firefly-iii-import/blob/main/#python-module) for a complete explanation of the class structure).
 
 The config class should inherit from `config.BankConfig` and should contain the attributes necessary to configure access to this type of account. Make sure, to extend the `if-else` statement in `config.BankConfig.from_type()` as well as `config.BANK_TYPES` with the identifier of the new account type.
 
@@ -69,7 +69,7 @@ token="private_access_token"
 
 The banks config is a list of configurations for different accounts. Every account configuration needs at least a `type` and a `name`. Other values/options are defined by the given account type.
 
-The `type` identifies which type of account this config is used for (see [Supported Banks](#supported-banks)) and the `name` is the name of the equivalent account in Firefly III.
+The `type` identifies which type of account this config is used for (see [Supported Banks](https://github.com/lufixSch/firefly-iii-import/blob/main/#supported-banks)) and the `name` is the name of the equivalent account in Firefly III.
 
 *Example:*
 ```toml

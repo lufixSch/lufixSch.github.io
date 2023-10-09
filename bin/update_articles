@@ -6,6 +6,7 @@ the front matter, update the content of the file with the content of the link.
 """
 
 import frontmatter as fr
+import regex as re
 
 from typing import Iterable
 
@@ -109,6 +110,39 @@ def pull_updates(articles: Iterable[tuple[str, fr.Post]]):
     return ((path, article, get(article["update"]).text) for path, article in articles)
 
 
+def fix_urls(articles: Iterable[tuple[str, fr.Post, str]]):
+    """
+    Fix the urls in the content of the article based on the repository link
+    """
+
+    for path, article, new_content in articles:
+        print("> Fixing URLs")
+
+        base_url = article["repository"].rstrip("/")
+        image_url = base_url + (
+            "/raw/master/" if "master" in article["update"] else "/raw/main/"
+        )
+        link_url = base_url + (
+            "/blob/master/" if "master" in article["update"] else "/blob/main/"
+        )
+
+        # Find and replace all relative image links with absolute links
+        new_content = re.sub(
+            r"!\[([^\]]+)\]\((?!http)([^\)]+)\)",
+            rf"![\1]({image_url}\2)",
+            new_content,
+        )
+
+        # Find and replace all relative markdown links with absolute links
+        new_content = re.sub(
+            r"\[([^\]]+)\]\((?!http)([^\)]+)\)",
+            rf"[\1]({link_url}\2)",
+            new_content,
+        )
+
+        yield path, article, new_content
+
+
 def replace_content(articles: Iterable[tuple[str, fr.Post, str]]):
     """
     Replace the content of the article with the content of the update link
@@ -187,7 +221,8 @@ if __name__ == "__main__":
     load_articles = load_articles(paths)
     filtered_articles = filter_articles(load_articles)
     updates = pull_updates(filtered_articles)
-    new_articles = replace_content(updates)
+    fixed_updates = fix_urls(updates)
+    new_articles = replace_content(fixed_updates)
     final_articles = generate_description(new_articles, llm, args.update_description)
     save_articles(final_articles)
 

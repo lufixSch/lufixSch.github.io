@@ -13,7 +13,7 @@ update: https://raw.githubusercontent.com/lufixSch/dteg_pruefungsfragen/main/REA
 
 Zusammenschrift aller Zwischenprüfungsfragen für DTEG
 
-PDF in [build/DTEG_Pruefungsfragen.pdf](./build/DTEG_Pruefungsfragen.pdf)
+PDF in [build/DTEG_Pruefungsfragen.pdf](https://github.com/lufixSch/dteg_pruefungsfragen/blob/main/./build/DTEG_Pruefungsfragen.pdf)
 
 ## License
 

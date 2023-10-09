@@ -2,7 +2,7 @@
 description: Introduction to LaTex and how to set it up locally.
 image: null
 layout: article
-repository: https://github.com/lufixSch/guides.git
+repository: https://github.com/lufixSch/guides
 repository_icon: github
 status: finished
 title: Latex Basics
@@ -19,8 +19,8 @@ Um Latex verwenden zu können, brauchst du zwei Dinge: Einen Editor und einen Di
 
 ## Latex Distro
 
-Wie du eine Latex Distribution einrichtest findest du [hier](distro)
+Wie du eine Latex Distribution einrichtest findest du [hier](https://github.com/lufixSch/guides/blob/main/distro)
 
 ## Latex Editor
 
-Wie du einen Latex Editor aufsetzt findest du [hier](editor)
+Wie du einen Latex Editor aufsetzt findest du [hier](https://github.com/lufixSch/guides/blob/main/editor)

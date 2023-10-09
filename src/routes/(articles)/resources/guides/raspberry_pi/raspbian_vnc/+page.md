@@ -1,8 +1,8 @@
 ---
-description: 'Setup VNC on a Raspberry Pi'
+description: Setup VNC on a Raspberry Pi
 image: null
 layout: article
-repository: https://github.com/lufixSch/guides.git
+repository: https://github.com/lufixSch/guides
 repository_icon: github
 status: finished
 title: VNC on Raspbian

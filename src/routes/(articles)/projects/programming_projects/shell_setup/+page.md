@@ -1,6 +1,6 @@
 ---
-description: A template for easily backing up and setting
-  up shell configurations and various other system components.
+description: A template for easily backing up and setting up shell configurations
+  and various other system components.
 image: /articles/projects/jungle.png
 layout: project
 repository: https://github.com/lufixSch/shell_setup

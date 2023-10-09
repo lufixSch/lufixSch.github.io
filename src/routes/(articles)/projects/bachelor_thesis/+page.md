@@ -3,7 +3,7 @@ description: A parametric speaker that uses ultrasonic transducers to transmit a
   sound with a beamforming effect, along with the software required for operation.
 image: /articles/pcb_circle.png
 layout: project
-repository: https://github.com/lufixSch/sound-laser.git
+repository: https://github.com/lufixSch/sound-laser
 repository_icon: github
 status: finished
 title: Bachelor Thesis
@@ -14,7 +14,7 @@ update: https://raw.githubusercontent.com/lufixSch/sound-laser/master/README.md
 
 This repository contains the source code, 3D Models, Circuit/PCB designs and documentation of the Sound Laser bachelor thesis at the FH JOANNEUM.
 
-The LaTex documentation is located in [docs/build/SoundLaser_Thesis.pdf](docs/build/SoundLaser_Thesis.pdf)
+The LaTex documentation is located in [docs/build/SoundLaser_Thesis.pdf](https://github.com/lufixSch/sound-laser/blob/master/docs/build/SoundLaser_Thesis.pdf)
 
 ## Abstract
 

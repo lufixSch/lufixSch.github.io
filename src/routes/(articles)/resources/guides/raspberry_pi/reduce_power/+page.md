@@ -1,9 +1,9 @@
 ---
-description: How to reduce the power consumption of a Raspberry
-  Pi by deactivating certain components.
+description: How to reduce the power consumption of a Raspberry Pi by deactivating
+  certain components.
 image: null
 layout: article
-repository: https://github.com/lufixSch/guides.git
+repository: https://github.com/lufixSch/guides
 repository_icon: github
 status: finished
 title: Reduce Powerconsumption

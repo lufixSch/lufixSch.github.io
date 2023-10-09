@@ -1,7 +1,6 @@
 ---
-description: Extension for the text-generation-webui that allows users
-  to run an LLM agent in the background, using various tools to solve problems or answer
-  questions
+description: Extension for the text-generation-webui that allows users to run an LLM
+  agent in the background, using various tools to solve problems or answer questions
 image: /articles/pcb_buttons.png
 layout: project
 repository: https://github.com/lufixSch/text_generation_webui_auto_llama
