@@ -23,6 +23,10 @@ def move_content():
 
     shutil.copytree("build", PUBLISH_DIR)
 
+    # Create .nojekyll file to prevent GitHub from trying to build the site
+    with open(f"{PUBLISH_DIR}/.nojekyll", "w") as f:
+        f.write("")
+
 
 def push_to_git():
     """Push changes to git with useful commit message"""
