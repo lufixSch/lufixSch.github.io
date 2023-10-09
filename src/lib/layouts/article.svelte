@@ -23,6 +23,11 @@
 	 * @type {import('$lib/types').ProjectStatus}
 	 */
 	export let status;
+
+	/**
+	 * @type {string}
+	 */
+	export let image;
 </script>
 
 <svelte:head>
@@ -32,8 +37,13 @@
 
 <section
 	id="header"
-	class="md:mx-[-2.5rem] lg:mx-[-5rem] lg:mt-[-2rem] mb-[-2.5rem] flex justify-center md:justify-end"
+	class={`relative overflow-hidden flex justify-center md:justify-end items-end ${
+		image != null ? 'h-36' : ''
+	}`}
 >
+	{#if image != null}
+		<img src={image} alt="Article related header" class="absolute w-full h-36 object-cover" />
+	{/if}
 	<SourceCard source={repository} icon_type={repository_icon} {status} />
 </section>
 <section id="content">

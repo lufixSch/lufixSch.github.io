@@ -1,3 +1,3 @@
-<div class="m-6 md:m-12 lg:m-24">
+<div class="mt-20 mx-6 md:mx-12 lg:mx-24">
 	<slot />
 </div>

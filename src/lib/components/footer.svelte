@@ -1,4 +1,6 @@
-<footer class="flex justify-evenly p-4 pt-6 border-t-[1px] border-gray-100 dark:border-gray-600">
+<footer
+	class="flex flex-col md:flex-row justify-evenly p-4 pt-6 border-t-[1px] border-gray-100 dark:border-gray-600"
+>
 	<p>
 		Many of the articles on this website are automatically generated from the markdown files in the
 		corresponding repositories. This might lead to some unexpected results, so please let me know if

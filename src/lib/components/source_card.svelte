@@ -12,7 +12,7 @@
 <a
 	href={source}
 	title="View source (Project status: {status})"
-	class="flex items-center m-2 p-2 w-fit rounded-md border-solid border-2 text-inherit dark:text-inherit hover:no-underline hover:text-inherit hover:dark:text-inherit space-x-1 hover:border-primary hover:dark:border-primary-dark fill-gray-900 dark:fill-gray-100 hover:fill-primary dark:hover:fill-primary-dark"
+	class="z-10 bg-gray-50 dark:bg-gray-900 flex items-center m-2 p-2 w-fit rounded-md border-solid border-2 text-inherit dark:text-inherit hover:no-underline hover:text-inherit hover:dark:text-inherit space-x-1 hover:border-primary hover:dark:border-primary-dark fill-gray-900 dark:fill-gray-100 hover:fill-primary dark:hover:fill-primary-dark"
 	target="_blank"
 >
 	<div id="icon" class="w-12 h-12 fill-inherit dark:fill-inherit">

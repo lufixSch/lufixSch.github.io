@@ -11,7 +11,7 @@
 	];
 </script>
 
-<nav class="bg-gray-100 dark:bg-gray-800 fixed top-0 left-0 w-full">
+<nav class="z-20 bg-gray-100 dark:bg-gray-800 fixed top-0 left-0 w-full">
 	<div class="flex justify-between items-center h-14">
 		<div class="flex items-center">
 			<a href="/">

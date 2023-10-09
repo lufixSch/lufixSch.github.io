@@ -2,6 +2,7 @@ export interface mdMetaData {
 	title: string;
 	layout: LayoutType;
 	image: string;
+	description: string;
 	repository: string;
 	repository_icon: RepoType;
 	status: ProjectStatus;
