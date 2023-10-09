@@ -133,6 +133,7 @@ def generate_description(
     for path, article in articles:
         if article.get("description", None) and not update:
             yield path, article
+            continue
 
         print(f"> Generating Description")
 
