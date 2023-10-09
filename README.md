@@ -1,38 +1,33 @@
-# create-svelte
+# LufixSch Homepage
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+SvelteKit based Homepage with an overview of my projects and other ressources written by me. Visit the Website at [lufixsch.github.io](lufixsch.github.io)
 
-## Creating a project
+Articles are generated from Markown files (Usually the README.md of the corresponding repository). The markdown content is automatically updated during build.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Build
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+In order to build the website first need to install the python dependencies for necessary for updating the markdown content.
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+pip install -r requirements.txt
 ```
 
-## Building
-
-To create a production version of your app:
+After this you can build the website using `npm`.
 
 ```bash
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+This will run the markdown update script as well as the build command for SvelteKit.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+> NOTE: If the description in a Markdown file is missing the `update_articles` will try to make API calls to a lokal running LLM (Text generation WebUI)
+
+## Develop
+
+The development server for the website can be started by executing
+
+```bash
+npm run dev
+```
+
+> NOTE: This command will not call the `update_articles` skript. It has to be executed manually if markdown content needs to be updated during development.
