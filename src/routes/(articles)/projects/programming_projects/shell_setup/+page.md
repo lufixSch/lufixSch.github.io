@@ -6,7 +6,7 @@ layout: project
 repository: https://github.com/lufixSch/shell_setup
 repository_icon: github
 status: wip
-title: Hunter and Prey
+title: Shell Setup
 update: https://raw.githubusercontent.com/lufixSch/shell_setup/main/README.md
 ---
 
