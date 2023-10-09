@@ -6,6 +6,8 @@
 		"update": "bin/update_articles",
 		"dev": "vite dev",
 		"build": "bin/update_articles && vite build",
+		"publish": "bin/publish",
+		"build:publish": "npm run build && npm run publish",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",

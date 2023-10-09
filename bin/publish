@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+
+"""
+Move homepage content from `build` to `site`
+Then push update to git
+"""
+
+import os
+import shutil
+
+
+def move_content():
+    """Clear `site` and move content from `build` (create `site` if it doesn't exist)"""
+
+    print("> Moving page content")
+
+    if os.path.exists("site"):
+        shutil.rmtree("site")
+    else:
+        os.mkdir("site")
+
+    shutil.copytree("build", "site")
+
+
+def push_to_git():
+    """Push changes to git with useful commit message"""
+
+    print("> Pushing to git")
+
+    os.system("git add ./site")
+    os.system("git commit -m 'Publish site'")
+    os.system("git push")
+
+
+if __name__ == "__main__":
+    move_content()
+    push_to_git()
