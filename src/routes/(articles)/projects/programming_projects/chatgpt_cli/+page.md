@@ -1,8 +1,6 @@
 ---
-description: ChatGPT Cli is a command-line interface that allows users to interact
-  with ChatGPT using simple commands. It provides a more efficient way to communicate
-  with the AI model, making it ideal for developers and users who prefer
-image: null
+description: An unofficial command line interface for interacting with ChatGPT.
+image: /articles/pcb_circle.png
 layout: project
 repository: https://github.com/lufixSch/chatgpt_cli.git
 repository_icon: github

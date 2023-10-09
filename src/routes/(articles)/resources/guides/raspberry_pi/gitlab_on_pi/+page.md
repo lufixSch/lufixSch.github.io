@@ -1,5 +1,5 @@
 ---
-description: Run GitLab on Raspberry Pi using this Docker Image
+description: Ein Set-up Guide für einen GitLab Container auf einem Raspberry Pi 4
 image: null
 layout: article
 repository: https://github.com/lufixSch/guides.git

@@ -1,12 +1,6 @@
 ---
-description: 'Energy consumption reduction for Raspberry Pi
-
-
-  General:
-
-  - Reduce power usage by disabling HDMI output ($25mA)
-
-  - Reduce power usage by disabling USB ports ($>50mA'
+description: How to reduce the power consumption of a Raspberry
+  Pi by deactivating certain components.
 image: null
 layout: article
 repository: https://github.com/lufixSch/guides.git

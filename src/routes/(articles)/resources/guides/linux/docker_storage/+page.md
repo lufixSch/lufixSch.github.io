@@ -1,14 +1,5 @@
 ---
-description: 'Change the location of Docker images
-
-
-  Guide from [here](https://evodify.com/change-docker-storage-location/)
-
-
-  Editing configuration
-
-
-  Create the file `/etc/docker/daemon.json`'
+description: Change the storage location of Docker images
 image: null
 layout: article
 repository: https://github.com/lufixSch/guides.git

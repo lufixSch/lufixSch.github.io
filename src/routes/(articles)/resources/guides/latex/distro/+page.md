@@ -1,9 +1,5 @@
 ---
-description: 'Latex Distro - Setup Guide
-
-
-  This guide explains how to install and set up different LaTeX distributions, focusing
-  on MikTeX and TeXLive.'
+description: Different LaTex Distros and how to use them
 image: null
 layout: article
 repository: https://github.com/lufixSch/guides.git

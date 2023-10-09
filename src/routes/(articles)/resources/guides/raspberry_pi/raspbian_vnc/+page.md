@@ -1,5 +1,5 @@
 ---
-description: Raspberry VNC Setup - Setup guide for a VNC server on a Raspberry Pi
+description: 'Setup VNC on a Raspberry Pi'
 image: null
 layout: article
 repository: https://github.com/lufixSch/guides.git

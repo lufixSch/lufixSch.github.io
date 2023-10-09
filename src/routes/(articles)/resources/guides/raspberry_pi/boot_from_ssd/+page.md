@@ -1,10 +1,5 @@
 ---
-description: 'This is a guide on how to setup your Raspberry Pi 4 to boot from an
-  external USB device or SSD.
-
-
-  The goal of this documentation is to provide a step-by-step guide on how to configure
-  your R'
+description: Boot Raspberry Pi 4 from SSD.
 image: null
 layout: article
 repository: https://github.com/lufixSch/guides.git

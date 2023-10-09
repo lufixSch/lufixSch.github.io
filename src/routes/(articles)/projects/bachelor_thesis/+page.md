@@ -1,6 +1,7 @@
 ---
-description: Sound Laser - Bachelor Thesis about Parametric Speakers
-image: null
+description: A parametric speaker that uses ultrasonic transducers to transmit audible
+  sound with a beamforming effect, along with the software required for operation.
+image: /articles/pcb_circle.png
 layout: project
 repository: https://github.com/lufixSch/sound-laser.git
 repository_icon: github

@@ -1,18 +1,11 @@
 ---
-description: 'Latex Getting Started - Guide to setting up Latex and editing your first
-  document
-
-
-  Introduction
-
-  To use Latex, you need two things: An editor and a distro ("compiler"). With the
-  editor, you can edit the'
+description: Introduction to LaTex and how to set it up locally.
 image: null
 layout: article
 repository: https://github.com/lufixSch/guides.git
 repository_icon: github
 status: finished
-title: Basics
+title: Latex Basics
 update: https://raw.github.com/lufixSch/guides/main/Latex/Basics.md
 ---
 

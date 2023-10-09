@@ -1,10 +1,8 @@
 ---
-description: 'Latex Dokument
-
-
-  The main goal of this project is to provide a framework for creating documents using
-  LaTeX. This includes support for various document types like scientific papers,
-  books, and presentations. The project also provides tools for formatting text,'
+description: responområھ bekan Fuß bekan Fuß bekan Fuß bekan Fuß bekan Fuß known known
+  known known known known known known known known known known known known known known
+  known known known known known known known known known known known known known known
+  known known known known known known
 image: null
 layout: article
 repository: https://github.com/lufixSch/guides.git

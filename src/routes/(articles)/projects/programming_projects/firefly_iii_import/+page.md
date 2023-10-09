@@ -1,8 +1,6 @@
 ---
-description: This project is intended to help users import their bank transactions
-  into Firefly III. It supports multiple bank accounts and provides a simple command
-  line interface as well as a python module for integration into larger projects.
-image: null
+description: "Automatic bank transaction import tool for Firefly III"
+image: /articles/pcb_buttons.png
 layout: project
 repository: https://github.com/lufixSch/firefly-iii-import.git
 repository_icon: github

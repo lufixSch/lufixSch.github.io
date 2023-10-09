@@ -15,21 +15,21 @@ from argparse import ArgumentParser
 from requests import get, post
 
 API_ENDPOINT = "http://localhost:5000/api/v1"
-DESCRIPTION_PROMPT = """Your goal is to create an one sentence description of a project or guide based on its documentation. A good description formulates the main goal and aim of the project. It starts directly with the main goal or use case. A good description is the direct answer to "What is the goal of project <project_name>?"
+DESCRIPTION_PROMPT = """###Instruction Your goal is to create an one sentence description of a project or guide based on its documentation. A good description formulates the main goal and aim of the project. It starts directly with the main goal or use case. A good description is the direct answer to "What is the goal of project <project_name>?"
 
-Good examples of descriptions are: 
+Good examples of descriptions are:
 A python Implementation of the Snake Game
 Setup guide for a Sphinx based documentation page
 Library for easier access to the GitHub API
 Circuits and PCB designs for a smartome LED stripe controller
 
-Remember: The description should be in plain text (no markdown), in the language of the documentation and only one short as possible
+Remember: The description should be in plain text (no markdown), in the language of the documentation and only one short sentence
 
 Documentation:
 {content}
 
 
-Description:"""
+### Response:"""
 
 
 class LLM:

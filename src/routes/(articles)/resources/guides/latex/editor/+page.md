@@ -1,7 +1,5 @@
 ---
-description: In diesem Guide wird Visual Studio Code als Texteditor für die Arbeit
-  mit LaTeX vorgestellt. Der Guide zeigt, wie man die notwendigen Erweiterungen installieren
-  und konfigurieren muss, um eine effiziente Entwicklung
+description: How to set up and configure a Latex environment using Visual Studio Code
 image: null
 layout: article
 repository: https://github.com/lufixSch/guides.git

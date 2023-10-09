@@ -1,7 +1,7 @@
 ---
-description: Hunter and Prey is a 2D game where two competing neural networks, the
-  hunter and the prey, try to survive.
-image: null
+description: A 2D game where neural networks compete as hunters and prey, trying to
+  survive.
+image: /articles/projects/jungle.png
 layout: project
 repository: https://github.com/lufixSch/hunter_and_prey.git
 repository_icon: github

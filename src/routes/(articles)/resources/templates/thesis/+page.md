@@ -1,6 +1,5 @@
 ---
-description: A LaTeX template for creating a bachelor or master thesis. Includes a
-  setup script and predefined device list.
+description: A LaTeX Protocol Template for Bachelor or Master Thesis
 image: null
 layout: article
 repository: https://github.com/lufixSch/thesis_template.git

@@ -1,5 +1,5 @@
 ---
-description: Flashing a Sonoff device using esptool.py
+description: Flash a Sonoff device using esptool.py.
 image: null
 layout: article
 repository: https://github.com/lufixSch/guides.git
