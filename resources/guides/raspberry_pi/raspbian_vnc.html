@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../../../minimal_logo_dark_small.png" />
+		<meta name="viewport" content="width=device-width" />
+		
+		<link href="../../../_app/immutable/assets/0.84e8b692.css" rel="stylesheet">
+		<link href="../../../_app/immutable/assets/article.70644360.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.44a73a42.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e23b10ae.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.20d1ec32.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.44b78fea.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.a23d3258.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.aa6a3662.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/2.0cff86dc.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/29.fa9c8246.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/_page.ed6bbc16.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/article.4aee75b0.js"><title>VNC on Raspbian</title><!-- HEAD_svelte-1fi5dar_START --><meta property="og:title" content="VNC on Raspbian"><!-- HEAD_svelte-1fi5dar_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+
+
+<nav class="z-20 bg-gray-100 dark:bg-gray-800 fixed top-0 left-0 w-full"><div class="flex justify-between items-center h-14"><div class="flex items-center"><a href="/" class="svelte-3njbym"><img src="/logo_dark_small.png" alt="logo" class="ml-4 w-12 h-12"></a></div>
+		<ul class="hidden sm:flex flex-row"><li class="svelte-3njbym"><a href="/projects" class="svelte-3njbym">Projects</a>
+				</li><li class="svelte-3njbym"><a href="/resources" class="svelte-3njbym active">Resources</a>
+				</li><li class="svelte-3njbym"><a href="/updates" class="svelte-3njbym">Updates</a>
+				</li></ul>
+		<button class="flex sm:hidden hover:bg-primary dark:hover:bg-primary-dark hover:text-white" type="button"><svg class="fill-current p-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="3.5rem"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"></path></svg></button></div>
+	
+</nav>
+<div class="min-h-screen flex flex-col justify-between"><body class=""><div class="mt-20 mx-6 md:mx-12 lg:mx-24">
+
+<section id="header" class="relative overflow-hidden flex justify-center md:justify-end items-end ">
+	<a href="https://github.com/lufixSch/guides" title="View source (Project status: finished)" class="z-10 bg-gray-50 dark:bg-gray-900 flex items-center m-2 p-2 w-fit rounded-md border-solid border-2 text-inherit dark:text-inherit hover:no-underline hover:text-inherit hover:dark:text-inherit space-x-1 hover:border-primary hover:dark:border-primary-dark fill-gray-900 dark:fill-gray-100 hover:fill-primary dark:hover:fill-primary-dark" target="_blank"><div id="icon" class="w-12 h-12 fill-inherit dark:fill-inherit"><svg xmlns="http://www.w3.org/2000/svg" height="1em" class="h-full" viewBox="0 0 448 512"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"></path></svg></div>
+	<div><p>lufixSch/guides</p>
+		<p class="m-0"><span>Status: <div class="h-[1.25rem] w-[1.25rem] inline-block align-middle mb-1"><svg viewBox="0 0 512 512" fill="none" class="h-full fill-green-700 dark:fill-green-500" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_201_5)"><path fill-rule="evenodd" clip-rule="evenodd" d="M256 512C397.385 512 512 397.385 512 256C512 114.615 397.385 0 256 0C114.615 0 0 114.615 0 256C0 397.385 114.615 512 256 512ZM207.849 340.898C206.876 339.925 206.005 338.89 205.234 337.804L140.21 272.78C130.837 263.408 130.837 248.212 140.21 238.839C149.582 229.467 164.778 229.467 174.151 238.839L225.059 289.747L337.957 176.849C347.329 167.477 362.525 167.477 371.898 176.849C381.271 186.222 381.271 201.418 371.898 210.79L242.382 340.307C242.267 340.426 242.151 340.545 242.033 340.663C241.906 340.789 241.779 340.914 241.65 341.037C232.267 350.27 217.175 350.224 207.849 340.898Z"></path></g><defs><clipPath id="clip0_201_5"><rect width="512" height="512" fill="white"></rect></clipPath></defs></svg></div></span></p></div></a></section>
+<section id="content"><h1>Raspberry VNC Setup</h1>
+<h2>Raspberry aufsetzen</h2>
+<ol><li>Raspbian mit grafischer Oberfläche installieren</li>
+<li>SSH einrichten</li>
+<li><a href="https://www.raspberrypi.org/documentation/remote-access/vnc/" rel="nofollow">VNC einrichten</a></li>
+<li>Automatisch in GUI booten deaktivieren</li></ol>
+<h2>VNC configurieren</h2>
+<ol><li>Verbinden über ssh</li>
+<li>VNC config öffnen mit</li></ol>
+<pre class="shiki nord" style="background-color: #2e3440ff" tabindex="0"><code><span class="line"><span style="color: #81A1C1">~</span><span style="color: #D8DEE9FF"> $ nano .vnc/config</span></span></code></pre>
+<ol start="3"><li>Folgenden Text hinzufügen und speichern</li></ol>
+<pre class="shiki nord" style="background-color: #2e3440ff" tabindex="0"><code><span class="line"><span style="color: #88C0D0">-randr</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">800</span><span style="color: #A3BE8C">x600,1024x768,1280x800,1280x960,1280x1024,1680x1050,1920x1080,3360x1050,1024x700,1200x740,1600x1000,3200x1000</span></span></code></pre>
+<ol start="4"><li>VNC Server starten mit folgendem befehl</li></ol>
+<pre class="shiki nord" style="background-color: #2e3440ff" tabindex="0"><code><span class="line"><span style="color: #81A1C1">~</span><span style="color: #D8DEE9FF"> $ vncserver</span></span>
+<span class="line"><span style="color: #88C0D0">...</span></span>
+<span class="line"><span style="color: #88C0D0">New</span><span style="color: #D8DEE9FF"> </span><span style="color: #A3BE8C">desktop</span><span style="color: #D8DEE9FF"> </span><span style="color: #A3BE8C">is</span><span style="color: #D8DEE9FF"> </span><span style="color: #A3BE8C">raspberry:1</span><span style="color: #D8DEE9FF"> (192.168.178.61:1)</span></span></code></pre>
+<ol start="5"><li>Auflösung anpassen (Display bezeichnung ist <code>:1</code>)</li></ol>
+<pre class="shiki nord" style="background-color: #2e3440ff" tabindex="0"><code><span class="line"><span style="color: #81A1C1">~</span><span style="color: #D8DEE9FF"> $ xrandr -display </span><span style="color: #81A1C1">&lt;</span><span style="color: #D8DEE9FF">display</span><span style="color: #81A1C1">&gt;</span><span style="color: #D8DEE9FF"> -s </span><span style="color: #81A1C1">&lt;</span><span style="color: #D8DEE9FF">auflösung</span><span style="color: #81A1C1">&gt;</span></span></code></pre>
+<ol start="3"><li>Mit VNC verbinden über den <a href="https://www.realvnc.com/de/connect/download/viewer/" rel="nofollow">RealVNC Viewer</a></li></ol>
+<h2>GUI ändern</h2>
+<ol><li>tasksel installieren</li></ol>
+<pre class="shiki nord" style="background-color: #2e3440ff" tabindex="0"><code><span class="line"><span style="color: #81A1C1">~</span><span style="color: #D8DEE9FF"> $ sudo apt install tasksel</span></span></code></pre>
+<ol start="2"><li><p><a href="https://linoxide.com/linux-how-to/how-install-gui-ubuntu-server-guide/" rel="nofollow">GUI installieren und starten</a></p></li>
+<li><p>VNC display neu starten</p></li></ol>
+<pre class="shiki nord" style="background-color: #2e3440ff" tabindex="0"><code><span class="line"><span style="color: #81A1C1">~</span><span style="color: #D8DEE9FF"> $ vncserver </span><span style="color: #81A1C1">&lt;</span><span style="color: #D8DEE9FF">display</span><span style="color: #81A1C1">&gt;</span><span style="color: #D8DEE9FF"> -kill</span></span>
+<span class="line"><span style="color: #81A1C1">~</span><span style="color: #D8DEE9FF"> $ vncserver</span></span></code></pre>
+<h3>GUI ändern alternative</h3>
+<p>Siehe <a href="https://forum-raspberrypi.de/forum/thread/48950-tutorial-eine-unendliche-geschichte-raspberry-4b-und-usb-boot/?postID=453256#post453256" rel="nofollow">hier</a></p></section></div></body>
+	<footer class="flex flex-col md:flex-row justify-evenly p-4 pt-6 border-t-[1px] border-gray-100 dark:border-gray-600"><p class="svelte-opo63t">Many of the articles on this website are automatically generated from the markdown files in the
+		corresponding repositories. This might lead to some unexpected results, so please let me know if
+		you find any errors!
+	</p>
+	<p class="svelte-opo63t">Some articles are still in German, but I am working on translating them. If you are interested
+		in a specific article, don&#39;t hesitate to contact me!
+	</p>
+	<p class="svelte-opo63t">If you want to get in touch, you can send me an email at <a href="mailto:lukas.schuettler@tum.de">lukas.schuettler@tum.de</a>.
+	</p>
+</footer></div>
+
+
+			
+			<script>
+				{
+					__sveltekit_1hohf8f = {
+						base: new URL("../../..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null,null];
+
+					Promise.all([
+						import("../../../_app/immutable/entry/start.44a73a42.js"),
+						import("../../../_app/immutable/entry/app.44b78fea.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 29],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

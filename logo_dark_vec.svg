@@ -1,0 +1,30 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="136" y="136" width="240" height="240" rx="50" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M186 136C158.386 136 136 158.386 136 186V326C136 339.807 141.596 352.307 150.645 361.355L361.355 150.645C352.307 141.596 339.807 136 326 136H186Z" fill="black" fill-opacity="0.25"/>
+<path d="M260 140H322C349.614 140 372 162.386 372 190V252H260V140Z" fill="#8D2FCE"/>
+<path d="M260 140H322C349.614 140 372 162.386 372 190V252H260V140Z" fill="#8D2FCE"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M252 140H190C162.386 140 140 162.386 140 190V252L252 140Z" fill="#8D2FCE"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M260 372H322C349.614 372 372 349.614 372 322V260L260 372Z" fill="#8D2FCE"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M260 372H322C349.614 372 372 349.614 372 322V260L260 372Z" fill="white" fill-opacity="0.3"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M260 252.355H372V190.355C372 176.548 366.404 164.048 357.355 155L260 252.355Z" fill="white" fill-opacity="0.3"/>
+<rect x="144" y="72" width="24" height="24" fill="white"/>
+<rect x="208" y="64" width="24" height="24" fill="white"/>
+<rect x="280" y="64" width="24" height="24" fill="white"/>
+<rect x="344" y="72" width="24" height="24" fill="white"/>
+<rect x="368" y="440" width="24" height="24" transform="rotate(-180 368 440)" fill="white"/>
+<rect x="304" y="448" width="24" height="24" transform="rotate(-180 304 448)" fill="white"/>
+<rect x="232" y="448" width="24" height="24" transform="rotate(-180 232 448)" fill="white"/>
+<rect x="168" y="440" width="24" height="24" transform="rotate(-180 168 440)" fill="white"/>
+<rect x="72" y="360" width="24" height="24" transform="rotate(-90 72 360)" fill="white"/>
+<rect x="56" y="304" width="24" height="24" transform="rotate(-90 56 304)" fill="white"/>
+<rect x="56" y="232" width="24" height="24" transform="rotate(-90 56 232)" fill="white"/>
+<rect x="72" y="176" width="24" height="24" transform="rotate(-90 72 176)" fill="white"/>
+<rect x="440" y="152" width="24" height="24" transform="rotate(90 440 152)" fill="white"/>
+<rect x="456" y="208" width="24" height="24" transform="rotate(90 456 208)" fill="white"/>
+<rect x="456" y="280" width="24" height="24" transform="rotate(90 456 280)" fill="white"/>
+<rect x="440" y="336" width="24" height="24" transform="rotate(90 440 336)" fill="white"/>
+<path d="M76 152V100L100 76H144" stroke="white" stroke-width="8"/>
+<path d="M144 436H100L76 412V360" stroke="white" stroke-width="8"/>
+<path d="M436 360V412L412 436H368" stroke="white" stroke-width="8"/>
+<path d="M368 76L412 76L436 100V152" stroke="white" stroke-width="8"/>
+</svg>
