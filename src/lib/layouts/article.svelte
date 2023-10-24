@@ -42,7 +42,11 @@
 	}`}
 >
 	{#if image != null}
-		<img src={image} alt="Article related header" class="absolute w-full h-36 object-cover" />
+		<img
+			src={image}
+			alt="Article related header"
+			class="absolute w-full h-36 object-cover rounded-md"
+		/>
 	{/if}
 	<SourceCard source={repository} icon_type={repository_icon} {status} />
 </section>

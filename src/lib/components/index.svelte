@@ -6,10 +6,6 @@
 		metadata: mdMetaData;
 		slug: string;
 	}[];
-
-	function indent(slug: string) {
-		return slug.replace('/index', '').split('/').length - 3;
-	}
 </script>
 
 <ul>
@@ -20,7 +16,6 @@
 			{:else}
 				<a
 					class="hover:text-primary dark:hover:text-primary-dark"
-					style="margin-left: {indent(article.slug) * 8}px;"
 					href={article.slug}
 					title={article.metadata.description}
 					>{article.metadata.title}

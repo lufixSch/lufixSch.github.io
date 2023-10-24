@@ -119,12 +119,21 @@ def fix_urls(articles: Iterable[tuple[str, fr.Post, str]]):
         print("> Fixing URLs")
 
         base_url = article["repository"].rstrip("/")
-        image_url = base_url + (
-            "/raw/master/" if "master" in article["update"] else "/raw/main/"
-        )
-        link_url = base_url + (
-            "/blob/master/" if "master" in article["update"] else "/blob/main/"
-        )
+
+        if "github" in base_url.lower():
+            image_url = base_url + (
+                "/raw/master/" if "master" in article["update"] else "/raw/main/"
+            )
+            link_url = base_url + (
+                "/blob/master/" if "master" in article["update"] else "/blob/main/"
+            )
+        elif "gitlab" in base_url.lower():
+            image_url = base_url + (
+                "/raw/master/" if "master" in article["update"] else "/raw/main/"
+            )
+            link_url = base_url + (
+                "/raw/master/" if "master" in article["update"] else "/raw/main/"
+            )
 
         # Find and replace all relative image links with absolute links
         new_content = re.sub(

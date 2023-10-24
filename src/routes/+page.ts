@@ -4,10 +4,10 @@ export async function load() {
 	const highlight_projects = [
 		'bachelor_thesis',
 		'electronics_projects/effect_pedals',
-		'programming_projects/conways-game-of-life'
+		'programming_projects/isek'
 	];
 
-	const highlght_resources = ['guides/latex/basics', 'templates/report', 'templates/thesis'];
+	const highlght_resources = ['guides/latex', 'templates/report', 'templates/thesis'];
 
 	const mdPages = import.meta.glob('./**/*.md');
 	const projects = await Promise.all(
