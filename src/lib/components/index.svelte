@@ -8,7 +8,7 @@
 	}[];
 </script>
 
-<ul>
+<ul class="list-none">
 	{#each articles as article}
 		<IndexItem slug={article.slug}>
 			{#if article.metadata?.header}

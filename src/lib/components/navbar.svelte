@@ -61,6 +61,10 @@
 	a {
 		@apply text-gray-900 dark:text-gray-100;
 	}
+
+	ul {
+		@apply list-none;
+	}
 	li a {
 		@apply block px-4 py-4 font-medium uppercase;
 		@apply hover:text-white;

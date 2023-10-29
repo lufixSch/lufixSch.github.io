@@ -1,5 +1,6 @@
 ---
-description: A python tool which helps to manage tasks by sorting them based on the Eisenhower Matrix
+description: A python tool which helps to manage tasks by sorting them based on the
+  Eisenhower Matrix
 image: /articles/ise_logo.png
 layout: project
 repository: https://gitlab.com/ise-tech-developments/isek
