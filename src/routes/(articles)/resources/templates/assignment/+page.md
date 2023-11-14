@@ -1,6 +1,5 @@
 ---
 description: LaTex template for assignments, particularly for university purposes
-  The template
 image: null
 layout: article
 repository: https://github.com/lufixSch/assignment_template
