@@ -15,7 +15,9 @@ from os import walk
 from argparse import ArgumentParser
 from requests import get, post
 
-API_ENDPOINT = "http://localhost:5000/api/v1"
+import openai
+
+API_ENDPOINT = "http://localhost:5000/v1"
 DESCRIPTION_PROMPT = """###Instruction Your goal is to create an one sentence description of a project or guide based on its documentation. A good description formulates the main goal and aim of the project. It starts directly with the main goal or use case. A good description is the direct answer to "What is the goal of project <project_name>?"
 
 Good examples of descriptions are:
@@ -46,26 +48,20 @@ class LLM:
         self.temperature = temperature
         self.max_new_tokens = max_new_tokens
 
+        self.client = openai.OpenAI(api_key="NONE", base_url=self.api_endpoint)
+
     def completion(
         self,
         prompt: str,
     ) -> str:
-        url = f"{self.api_endpoint}/generate"
-        body = {
-            "prompt": prompt,
-            "temperature": self.temperature,
-            "max_new_tokens": self.max_new_tokens,
-        }
+        res = self.client.completions.create(
+            model="NONE",
+            prompt=prompt,
+            temperature=self.temperature,
+            max_tokens=self.max_new_tokens,
+        )
 
-        res = post(url, json=body)
-
-        if res.status_code != 200:
-            raise ValueError(f"LLM Completion failed with code {res.status_code}")
-
-        res_dict = res.json()
-        text = res_dict["results"][0]["text"]
-
-        return text
+        return res.choices[0].text
 
 
 def find_articles(base_path: str):
