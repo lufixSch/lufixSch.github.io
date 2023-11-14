@@ -5,8 +5,8 @@ image: null
 layout: article
 repository: https://github.com/lufixSch/assignment_template
 repository_icon: github
-status: finished
-title: Report
+status: wip
+title: Assignment
 update: https://raw.githubusercontent.com/lufixSch/assignment_template/main/README.md
 ---
 
