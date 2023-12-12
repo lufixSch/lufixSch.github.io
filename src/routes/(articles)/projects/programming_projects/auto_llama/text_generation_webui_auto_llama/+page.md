@@ -1,6 +1,5 @@
 ---
-description: Extension for the text-generation-webui that allows users to run an LLM
-  agent in the background, using various tools to solve problems or answer questions
+description: text-generation-webui Extension for AutoLLaMa
 image: /articles/pcb_buttons.png
 layout: project
 repository: https://github.com/lufixSch/text_generation_webui_auto_llama
@@ -15,6 +14,9 @@ update: https://raw.githubusercontent.com/lufixSch/text_generation_webui_auto_ll
 Run an Agent in the background which uses different tools to solve a given problem/question.
 
 The Agent is triggered in the Chat mode by starting a message with `/do`. The Agent will then use the provided tools to solve the given problem and will add the results to the chat context.
+
+> **⚠️ WARNING: This project is currently stalled!**
+> I'm working on a clean implementation of ideas and concepts from this project and more in *[lufixSch/auto_llama](https://github.com/lufixSch/auto_llama)*.
 
 ## Tools
 ### Existing Tools
