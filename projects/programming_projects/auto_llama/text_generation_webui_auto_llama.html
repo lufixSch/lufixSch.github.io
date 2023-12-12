@@ -2,22 +2,22 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="../../minimal_logo_dark_small.png" />
+		<link rel="icon" href="../../../minimal_logo_dark_small.png" />
 		<meta name="viewport" content="width=device-width" />
 		
-		<link href="../../_app/immutable/assets/0.677d8152.css" rel="stylesheet">
-		<link href="../../_app/immutable/assets/article.70644360.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../_app/immutable/entry/start.eeb92f8d.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/index.e23b10ae.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.fc6671f6.js">
-		<link rel="modulepreload" href="../../_app/immutable/entry/app.a49a7775.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/preload-helper.41c905a7.js">
-		<link rel="modulepreload" href="../../_app/immutable/nodes/0.30e9c555.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/stores.67bd1901.js">
-		<link rel="modulepreload" href="../../_app/immutable/nodes/2.0cff86dc.js">
-		<link rel="modulepreload" href="../../_app/immutable/nodes/17.1f17d7f7.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/_page.5f2344e4.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/article.e19d21fa.js"><title>AutoLLaMa (Text generation WebUI Extension)</title><!-- HEAD_svelte-1fi5dar_START --><meta property="og:title" content="AutoLLaMa (Text generation WebUI Extension)"><!-- HEAD_svelte-1fi5dar_END -->
+		<link href="../../../_app/immutable/assets/0.677d8152.css" rel="stylesheet">
+		<link href="../../../_app/immutable/assets/article.70644360.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.234810c8.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e23b10ae.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.dcb64ee9.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.5be7b0ca.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.86a80b70.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.e2d7db24.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/2.0cff86dc.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/10.8bef1541.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/_page.b195d09c.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/article.e19d21fa.js"><title>AutoLLaMa (Text generation WebUI Extension)</title><!-- HEAD_svelte-1fi5dar_START --><meta property="og:title" content="AutoLLaMa (Text generation WebUI Extension)"><!-- HEAD_svelte-1fi5dar_END -->
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
@@ -40,6 +40,8 @@
 <section id="content"><h1>AutoLLaMa (An Oobabooga text-generation-webui Extension)</h1>
 <p>Run an Agent in the background which uses different tools to solve a given problem/question.</p>
 <p>The Agent is triggered in the Chat mode by starting a message with <code>/do</code>. The Agent will then use the provided tools to solve the given problem and will add the results to the chat context.</p>
+<blockquote><p><strong>⚠️ WARNING: This project is currently stalled!</strong>
+I’m working on a clean implementation of ideas and concepts from this project and more in <em><a href="https://github.com/lufixSch/auto_llama" rel="nofollow">lufixSch/auto_llama</a></em>.</p></blockquote>
 <h2>Tools</h2>
 <h3>Existing Tools</h3>
 <ul><li>Wikipedia</li></ul>
@@ -65,8 +67,8 @@
 			
 			<script>
 				{
-					__sveltekit_1cg5ogv = {
-						base: new URL("../..", location).pathname.slice(0, -1),
+					__sveltekit_1f9m39v = {
+						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
 
@@ -75,11 +77,11 @@
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../_app/immutable/entry/start.eeb92f8d.js"),
-						import("../../_app/immutable/entry/app.a49a7775.js")
+						import("../../../_app/immutable/entry/start.234810c8.js"),
+						import("../../../_app/immutable/entry/app.5be7b0ca.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
-							node_ids: [0, 2, 17],
+							node_ids: [0, 2, 10],
 							data,
 							form: null,
 							error: null

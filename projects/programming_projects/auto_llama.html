@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../../minimal_logo_dark_small.png" />
+		<meta name="viewport" content="width=device-width" />
+		
+		<link href="../../_app/immutable/assets/0.677d8152.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/article.70644360.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.234810c8.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.e23b10ae.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.dcb64ee9.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.5be7b0ca.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.86a80b70.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/stores.e2d7db24.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/2.0cff86dc.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/9.b25d5249.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/_page.784a0c91.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/article.e19d21fa.js"><title>AutoLLaMa</title><!-- HEAD_svelte-1fi5dar_START --><meta property="og:title" content="AutoLLaMa"><!-- HEAD_svelte-1fi5dar_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+
+
+<nav class="z-20 bg-gray-100 dark:bg-gray-800 fixed top-0 left-0 w-full"><div class="flex justify-between items-center h-14"><div class="flex items-center"><a href="/" class="svelte-521xrf"><img src="/logo_dark_small.png" alt="logo" class="ml-4 w-12 h-12"></a></div>
+		<ul class="hidden sm:flex flex-row svelte-521xrf"><li class="svelte-521xrf"><a href="/projects" class="svelte-521xrf active">Projects</a>
+				</li><li class="svelte-521xrf"><a href="/resources" class="svelte-521xrf">Resources</a>
+				</li><li class="svelte-521xrf"><a href="/updates" class="svelte-521xrf">Updates</a>
+				</li></ul>
+		<button class="flex sm:hidden hover:bg-primary dark:hover:bg-primary-dark hover:text-white" type="button"><svg class="fill-current p-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="3.5rem"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"></path></svg></button></div>
+	
+</nav>
+<div class="min-h-screen flex flex-col justify-between"><body class=""><div class="mt-20 mx-6 md:mx-12 lg:mx-24">
+
+<section id="header" class="relative overflow-hidden flex justify-center md:justify-end items-end h-36"><img src="/articles/pcb_buttons.png" alt="Article related header" class="absolute w-full h-36 object-cover rounded-md">
+	<a href="https://github.com/lufixSch/auto_llama" title="View source (Project status: wip)" class="z-10 bg-gray-50 dark:bg-gray-900 flex items-center m-2 p-2 w-fit rounded-md border-solid border-2 text-inherit dark:text-inherit hover:no-underline hover:text-inherit hover:dark:text-inherit space-x-1 hover:border-primary hover:dark:border-primary-dark fill-gray-900 dark:fill-gray-100 hover:fill-primary dark:hover:fill-primary-dark" target="_blank"><div id="icon" class="w-12 h-12 fill-inherit dark:fill-inherit"><svg xmlns="http://www.w3.org/2000/svg" height="1em" class="h-full" viewBox="0 0 448 512"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"></path></svg></div>
+	<div><p>lufixSch/auto_llama</p>
+		<p class="m-0"><span>Status: <div class="h-[1.25rem] w-[1.25rem] inline-block align-middle mb-1"><svg viewBox="0 0 512 512" fill="none" class="h-full fill-cyan-700 dark:fill-cyan-500" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_201_13)"><path fill-rule="evenodd" clip-rule="evenodd" d="M256 512C397.385 512 512 397.385 512 256H256V0C114.615 0 0 114.615 0 256C0 397.385 114.615 512 256 512Z"></path></g><defs><clipPath id="clip0_201_13"><rect width="512" height="512" fill="white"></rect></clipPath></defs></svg></div></span></p></div></a></section>
+<section id="content"><h1>AutoLLaMa</h1>
+<p>Supercharge your local LLM with different agents</p>
+<p>This project is a union off different smaller ideas I had/build to improve the capabilities of LLMs, build into a modular framework. The framework is built to be extendable, so feel free to experiment with it.</p>
+<blockquote><p><strong>ℹ️ NOTE:</strong> Maybe you also found my text_generation_webui_auto_llama repository on GitHub. This is <strong>NOT</strong> (yet) a extension of auto-llama for oobabooga/text-generation-webui!</p></blockquote>
+<blockquote><p><strong>⚠️ WARNING: This project is still in early development!</strong></p></blockquote>
+<h2>Framework</h2>
+<p>At the moment the framework is based on four main ideas:</p>
+<ol><li>Agents - Agent that uses an LLM and/or other tools to perform a specific task derived from a single prompt or a chat history.</li>
+<li>Managers - A system that decides which agent to use for a given prompt or chat history. However, the boundaries between Agents and Managers are not clear cut (see for example <code>auto_llama.agents.research.ResearchAgent</code>)</li>
+<li>Memory - A system that stores information across agents and prompts to improve the performance of the system.</li>
+<li>LLMs - A interface to interact with a LLM for regular text generation and chat.</li></ol>
+<p>Additionally the <code>auto_llama</code> module provides some submodules with helpful utilities.</p>
+<ol><li>nlp - Some functions for text processing</li>
+<li>react - Small ReAct framework to make an implementation easier</li></ol>
+<h2>Implementations</h2>
+<h3>Agents</h3>
+<p>There are a few agents implemented currently. They are accessible over the <code>auto_llama.agents</code> module:</p>
+<ul><li>code - Agents based around executing code in a sandbox environment (Docker container)<ul><li>CodeExecAgent - Executes code included in the prompt or last chat message</li>
+<li>CodeAgent - Uses an LLM to generate code based on a objective and executes it</li></ul></li>
+<li>research - Agents based around finding information in the internet<ul><li>SearchAgent: Retrieves information using a single tool (e.g. WikipediaSearchAgent, DuckDuckGoSearchAgent)</li>
+<li>ResearchAgent: Thoroughly researchs a given topic using multiple SearchAgents and ReAct</li></ul></li></ul>
+<h2>Installation</h2>
+<p>At the moment it is not possible to install AutoLLaMa using <code>pip</code>. You need to install it from source.</p>
+<ol><li>Clone the repository</li>
+<li><code>pip install .</code> in the root directory of the repository</li></ol>
+<p>In order to make the package light weight there are optional dependencies defined separately for each submodule or group of agents. You cann install them separately.</p>
+<p><em>Example:</em></p>
+<pre class="shiki nord" style="background-color: #2e3440ff" tabindex="0"><code><span class="line"><span style="color: #88C0D0">pip</span><span style="color: #D8DEE9FF"> </span><span style="color: #A3BE8C">install</span><span style="color: #D8DEE9FF"> </span><span style="color: #A3BE8C">.[agent.code]</span></span>
+<span class="line"><span style="color: #88C0D0">pip</span><span style="color: #D8DEE9FF"> </span><span style="color: #A3BE8C">install</span><span style="color: #D8DEE9FF"> </span><span style="color: #A3BE8C">.[module.nlp]</span></span></code></pre>
+<p>To install all dependencies, run <code>pip install .[all]</code>. This will install all optional dependencies for the project.</p>
+<blockquote><p><strong>ℹ️ NOTE:</strong> Optional dependencies including the <code>nlp</code> module (e.g. <code>module.nlp</code>, <code>agent.research</code> …) will install torch. Depending on you system you might want to install it beforehand.</p></blockquote>
+<h3>Development</h3>
+<p>Install the package in editable mode</p>
+<pre class="shiki nord" style="background-color: #2e3440ff" tabindex="0"><code><span class="line"><span style="color: #88C0D0">pip</span><span style="color: #D8DEE9FF"> </span><span style="color: #A3BE8C">install</span><span style="color: #D8DEE9FF"> </span><span style="color: #A3BE8C">-e</span><span style="color: #D8DEE9FF"> </span><span style="color: #A3BE8C">.[</span><span style="color: #81A1C1">&lt;</span><span style="color: #A3BE8C">opional_dependencie</span><span style="color: #D8DEE9FF">s</span><span style="color: #81A1C1">&gt;</span><span style="color: #A3BE8C">]</span></span></code></pre>
+<h2>ToDo</h2>
+<ul><li>Add Manager implementations<ul><li>CommandManager - Select agent based on a command (e.g. /code, /search …)</li>
+<li>KeywordManager - Select agent based on keywords in the input</li>
+<li>AutoManager - Automatically decides which agent to use based on the context</li></ul></li>
+<li>Improve agent response system<ul><li>Rework response types -&gt; don’t force a position, just give information about the response</li></ul></li>
+<li>Improve agent <code>run_chat</code> default</li>
+<li>Add time aware memory (No Idea how to do this!)<ul><li>Idea: <em>Fetch x recent memory’s and y memory’s (time independent) and mark them as recent/general</em></li></ul></li>
+<li>Add image/multimodal memory (Supported by txtai out of the box)</li></ul></section></div></body>
+	<footer class="flex flex-col md:flex-row justify-evenly p-4 pt-6 border-t-[1px] border-gray-100 dark:border-gray-600"><p class="svelte-opo63t">Many of the articles on this website are automatically generated from the markdown files in the
+		corresponding repositories. This might lead to some unexpected results, so please let me know if
+		you find any errors!
+	</p>
+	<p class="svelte-opo63t">Some articles are still in German, but I am working on translating them. If you are interested
+		in a specific article, don&#39;t hesitate to contact me!
+	</p>
+	<p class="svelte-opo63t">If you want to get in touch, you can send me an email at <a href="mailto:lukas.schuettler@tum.de">lukas.schuettler@tum.de</a>.
+	</p>
+</footer></div>
+
+
+			
+			<script>
+				{
+					__sveltekit_1f9m39v = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null,null];
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.234810c8.js"),
+						import("../../_app/immutable/entry/app.5be7b0ca.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 9],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

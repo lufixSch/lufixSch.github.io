@@ -7,16 +7,16 @@
 		
 		<link href="../../_app/immutable/assets/0.677d8152.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/article.70644360.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../_app/immutable/entry/start.eeb92f8d.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.234810c8.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/index.e23b10ae.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.fc6671f6.js">
-		<link rel="modulepreload" href="../../_app/immutable/entry/app.a49a7775.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.dcb64ee9.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.5be7b0ca.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/preload-helper.41c905a7.js">
-		<link rel="modulepreload" href="../../_app/immutable/nodes/0.30e9c555.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/stores.67bd1901.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.86a80b70.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/stores.e2d7db24.js">
 		<link rel="modulepreload" href="../../_app/immutable/nodes/2.0cff86dc.js">
-		<link rel="modulepreload" href="../../_app/immutable/nodes/15.c95897f0.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/_page.a5aa6322.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/17.c95513c6.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/_page.ed84c5b3.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/article.e19d21fa.js"><title>LocalCompletion</title><!-- HEAD_svelte-1fi5dar_START --><meta property="og:title" content="LocalCompletion"><!-- HEAD_svelte-1fi5dar_END -->
 	</head>
 	<body data-sveltekit-preload-data="hover">
@@ -44,23 +44,47 @@
 <ul><li>Inline (multi line) code completion</li>
 <li>Works with any OpenAI compatible API</li>
 <li>Save multiple API Endpoints and switch easily between them</li>
-<li>Reducing requests to LLMs by saving previous responses</li></ul>
+<li>Reducing requests to LLMs by<ul><li>saving previous responses</li>
+<li>skiping completion depending on the last symbol</li>
+<li>only posting request if no input was given for some time (can be specified in the settings)</li></ul></li>
+<li>Dynamically detect multi line or single line completion</li></ul>
 <h3>Roadmap</h3>
-<ul><li>Improve (optional) features to reduce LLM requests<ul><li>Increase time between keystrokes before requesting a new completion</li>
-<li>Add option (possible regex) to specify after which characters the LLM should be/not be triggered</li></ul></li>
+<ul><li>Improve (optional) features to reduce LLM requests<ul><li>Add option (possible regex) to specify after which characters the LLM should be/not be triggered</li></ul></li>
 <li>Increase context<ul><li>Add content after cursor to prompt</li>
-<li>Add content of other files</li></ul></li></ul>
+<li>Add content of other files</li></ul></li>
+<li>Return multiple completions (add suggestions from history)</li>
+<li>Improve detection of already existing symbols at the end of a completion<ul><li>Reduce chance of repeating already existing symbols</li>
+<li>Reduce completion stopping because of false detection of already existing symbols</li></ul></li>
+<li>Custom completion stopping<ul><li>Stop completion after n lines</li>
+<li>Detect bracket/brace/parenthesis imbalance and stop/don’t stop<ul><li>Missing closing bracket -&gt; don’t stop</li>
+<li>Improve detection of already existing symbols at the end of a completion based on this</li></ul></li></ul></li>
+<li>First line preview<ul><li>Preview the first line (and maybe more) of the completion while completion is still ongoing</li></ul></li>
+<li>Enable/Disable llm completion for specific filetypes</li>
+<li>Fix Error where completion is not diplayed</li></ul>
 <h2>Extension Settings</h2>
 <ul><li><code>localcompletion.active_endpoint</code>: The URL of the API which is used for generating the code completion</li>
 <li><code>localcompletion.endpoints</code>: List of URL endpoints</li>
 <li><code>localcompletion.temperature</code>: Temperature of the LLM</li>
 <li><code>localcompletion.max_tokens</code>: Maximum number of tokens in the response</li>
 <li><code>localcompletion.stop_sequences</code>: Additional stop sequences (max. 2)</li>
-<li><code>localcompletion.reduce_calls</code>: Reduce API calls with various strategies (e.g. skip completion if last symbol was a letter)</li></ul>
+<li><code>localcompletion.reduce_calls</code>: Reduce API calls with various strategies (e.g. skip completion if last symbol was a letter)</li>
+<li><code>localcompletion.skip_autocomplete_widget</code>: Skip completion if autocomplete widget is active</li>
+<li><code>localcompletion.completion_timeout</code>: Minimum time between keystrokes (in ms) before sending a completion request (Reduces API calls, which are closed immediately after)</li></ul>
 <h2>Known Issues</h2>
 <p>The extension does not yet support a custom API key. This means it only works for APIs which do not need a key.</p>
 <p>Model switching is not supported at the moment as most local tools don’t support that property either.</p>
 <h2>Release Notes</h2>
+<h3>0.1.2 (WIP)</h3>
+<ul><li>Add dynamic stopping based on line count and code balance</li></ul>
+<h3>0.1.1</h3>
+<ul><li>Fix race condition error which crashed the extension</li>
+<li>Fix extra space at the start of single line completion</li></ul>
+<h3>0.1.0</h3>
+<ul><li>Publish to Visual Studio Marketplace</li></ul>
+<h3>0.0.5</h3>
+<ul><li>Increase time between keystrokes before requesting a new completion</li>
+<li>Show inline completion even if autocomplet widget is active (can be disabled)</li>
+<li>Fix bug where sometimes a running completion would not be stopped if a new completion is triggered</li></ul>
 <h3>0.0.4</h3>
 <ul><li>Distinguish between single line and multiline completion by checking text after the cursor</li>
 <li>Add ‘\n’ to stop token for single line</li>
@@ -94,7 +118,7 @@
 			
 			<script>
 				{
-					__sveltekit_1cg5ogv = {
+					__sveltekit_1f9m39v = {
 						base: new URL("../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -104,11 +128,11 @@
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../_app/immutable/entry/start.eeb92f8d.js"),
-						import("../../_app/immutable/entry/app.a49a7775.js")
+						import("../../_app/immutable/entry/start.234810c8.js"),
+						import("../../_app/immutable/entry/app.5be7b0ca.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
-							node_ids: [0, 2, 15],
+							node_ids: [0, 2, 17],
 							data,
 							form: null,
 							error: null
