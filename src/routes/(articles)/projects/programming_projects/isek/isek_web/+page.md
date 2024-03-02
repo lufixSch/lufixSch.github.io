@@ -1,6 +1,7 @@
 ---
 description: A web frontend for the ISEK API, a self-sorting todo list
 image: /articles/ise_logo.png
+last_update: '2024-03-02T13:29:18.334381'
 layout: project
 repository: https://gitlab.com/ise-tech-developments/isek_web
 repository_icon: gitlab

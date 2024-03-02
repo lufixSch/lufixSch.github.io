@@ -2,6 +2,7 @@
 description: A parametric speaker that uses ultrasonic transducers to transmit audible
   sound with a beamforming effect, along with the software required for operation.
 image: /articles/pcb_circle.png
+last_update: '2024-03-02T13:29:18.334381'
 layout: project
 repository: https://github.com/lufixSch/sound-laser
 repository_icon: github

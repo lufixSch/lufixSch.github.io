@@ -8,6 +8,7 @@ export interface mdMetaData {
 	status: ProjectStatus;
 	update?: string;
 	header?: boolean;
+	last_update?: string;
 }
 
 export type LayoutType = 'article' | 'error' | 'project';

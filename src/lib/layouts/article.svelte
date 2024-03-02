@@ -3,6 +3,7 @@
 	import '@fontsource/ibm-plex-mono/latin.css';
 
 	import SourceCard from '$lib/components/source_card.svelte';
+	import moment from 'moment';
 
 	/**
 	 * @type {string}
@@ -28,6 +29,11 @@
 	 * @type {string}
 	 */
 	export let image;
+
+	/**
+	 * @type {string}
+	 */
+	export let last_update;
 </script>
 
 <svelte:head>
@@ -53,3 +59,6 @@
 <section id="content">
 	<slot />
 </section>
+<p class="mt-4 mb-4 text-xs text-right">
+	Last page update: {moment(last_update).format('dddd, MMMM Do YYYY, HH:mm:ss')}
+</p>

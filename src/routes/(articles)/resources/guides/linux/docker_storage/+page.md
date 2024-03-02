@@ -1,6 +1,7 @@
 ---
 description: Change the storage location of Docker images
 image: null
+last_update: '2024-03-02T13:29:18.334381'
 layout: article
 repository: https://github.com/lufixSch/guides.git
 repository_icon: github

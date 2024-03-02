@@ -9,16 +9,19 @@ import frontmatter as fr
 import regex as re
 
 from typing import Iterable
+from datetime import datetime
 
 import os
 from os import walk
 from argparse import ArgumentParser
-from requests import get, post
+from requests import get
 
 import openai
 
 API_ENDPOINT = "http://localhost:5000/v1"
-DESCRIPTION_PROMPT = """###Instruction Your goal is to create an one sentence description of a project or guide based on its documentation. A good description formulates the main goal and aim of the project. It starts directly with the main goal or use case. A good description is the direct answer to "What is the goal of project <project_name>?"
+DESCRIPTION_PROMPT = """###Instruction
+Your goal is to create an one sentence description of a project or guide based on its documentation. A good description formulates the main goal and aim of the project.
+It starts directly with the main goal or use case. A good description is the direct answer to "What is the goal of project <project_name>?"
 
 Good examples of descriptions are:
 A python Implementation of the Snake Game
@@ -33,6 +36,8 @@ Documentation:
 
 
 ### Response:"""
+
+TIMESTAMP = datetime.now().isoformat()
 
 
 class LLM:
@@ -154,7 +159,7 @@ def replace_content(articles: Iterable[tuple[str, fr.Post, str]]):
     """
 
     for path, article, new_content in articles:
-        print(f"> Updating")
+        print("> Updating")
 
         article.content = new_content
         yield path, article
@@ -174,7 +179,7 @@ def generate_description(
             yield path, article
             continue
 
-        print(f"> Generating Description")
+        print("> Generating Description")
 
         prompt = DESCRIPTION_PROMPT.format(content=article.content)
 
@@ -185,6 +190,17 @@ def generate_description(
 
         article["description"] = description.strip()
 
+        yield path, article
+
+
+def set_timestamp(articles: Iterable[tuple[str, fr.Post]]):
+    """
+    Set the timestamp of the update for the article
+    """
+
+    for path, article in articles:
+        print("> Setting timestamp")
+        article["last_update"] = TIMESTAMP
         yield path, article
 
 
@@ -229,6 +245,8 @@ if __name__ == "__main__":
     fixed_updates = fix_urls(updates)
     new_articles = replace_content(fixed_updates)
     final_articles = generate_description(new_articles, llm, args.update_description)
+    final_articles = set_timestamp(final_articles)
+
     save_articles(final_articles)
 
     print("Done!")

@@ -22,7 +22,7 @@
 			</div>
 		{/if}
 		<div class="px-2 overflow-y-scroll">
-			<h4 class="z-10 text-center shadow-2xl">{metadata.title}</h4>
+			<h4 class="z-10 text-center">{metadata.title}</h4>
 			<p>{metadata.description}</p>
 		</div>
 	</div>

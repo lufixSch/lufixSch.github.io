@@ -1,6 +1,7 @@
 ---
 description: A collection of all intermediate exam questions for DTEG
 image: null
+last_update: '2024-03-02T13:29:18.334381'
 layout: article
 repository: https://github.com/lufixSch/dteg_pruefungsfragen
 repository_icon: github
