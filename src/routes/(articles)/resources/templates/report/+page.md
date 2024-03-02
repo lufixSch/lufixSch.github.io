@@ -1,7 +1,7 @@
 ---
 description: LaTex lab report Template
 image: null
-last_update: '2024-03-02T13:29:18.334381'
+last_update: '2024-03-02T12:45:58.401885+00:00'
 layout: article
 repository: https://github.com/lufixSch/protokoll_vorlage.git
 repository_icon: github

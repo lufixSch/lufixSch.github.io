@@ -1,7 +1,7 @@
 ---
 description: Boot Raspberry Pi 4 from SSD.
 image: null
-last_update: '2024-03-02T13:29:18.334381'
+last_update: '2024-03-02T12:45:58.401885+00:00'
 layout: article
 repository: https://github.com/lufixSch/guides.git
 repository_icon: github

@@ -60,5 +60,5 @@
 	<slot />
 </section>
 <p class="mt-4 mb-4 text-xs text-right">
-	Last page update: {moment(last_update).format('dddd, MMMM Do YYYY, HH:mm:ss')}
+	Last page update: {moment(last_update).utc().format('dddd, MMMM Do YYYY, HH:mm:ss z')}
 </p>

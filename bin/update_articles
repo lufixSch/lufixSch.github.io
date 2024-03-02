@@ -10,6 +10,7 @@ import regex as re
 
 from typing import Iterable
 from datetime import datetime
+from zoneinfo import ZoneInfo
 
 import os
 from os import walk
@@ -37,7 +38,7 @@ Documentation:
 
 ### Response:"""
 
-TIMESTAMP = datetime.now().isoformat()
+TIMESTAMP = datetime.now(ZoneInfo("UTC")).isoformat()
 
 
 class LLM:
