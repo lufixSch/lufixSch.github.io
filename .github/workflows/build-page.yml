@@ -32,21 +32,15 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3
+          python-version: '3.11'
           cache: 'pip'
       - name: Setup Pages
         uses: actions/configure-pages@v4
-      - name: Restore cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            .svelte-kit/package-lock.json
-            node_modules/
-          key: ${{ runner.os }}-sveltekit-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-sveltekit-${{ hashFiles('**/package-lock.json') }}
       - name: Install Dependencies
-        run: npm ci
+        run: |
+          npm ci
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
       - name: Build Page
         run: npm run build
       - name: Upload artifact
