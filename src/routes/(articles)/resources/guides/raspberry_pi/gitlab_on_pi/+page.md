@@ -1,7 +1,7 @@
 ---
 description: Ein Set-up Guide für einen GitLab Container auf einem Raspberry Pi 4
 image: null
-last_update: '2024-03-02T12:45:58.401885+00:00'
+last_update: '2024-06-23T12:12:37.898270+00:00'
 layout: article
 repository: https://github.com/lufixSch/guides.git
 repository_icon: github

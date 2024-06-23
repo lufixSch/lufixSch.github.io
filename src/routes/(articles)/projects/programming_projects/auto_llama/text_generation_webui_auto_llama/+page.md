@@ -1,7 +1,7 @@
 ---
 description: text-generation-webui Extension for AutoLLaMa
 image: /articles/pcb_buttons.png
-last_update: '2024-03-02T12:45:58.401885+00:00'
+last_update: '2024-06-23T12:12:37.898270+00:00'
 layout: project
 repository: https://github.com/lufixSch/text_generation_webui_auto_llama
 repository_icon: github

@@ -1,7 +1,7 @@
 ---
 description: Circuits and PCB designs for building audio effect pedals
 image: /articles/pcb_buttons.png
-last_update: '2024-03-02T12:45:58.401885+00:00'
+last_update: '2024-06-23T12:12:37.898270+00:00'
 layout: project
 repository: https://github.com/lufixSch/effect-pedals.git
 repository_icon: github

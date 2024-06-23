@@ -2,7 +2,7 @@
 description: Supercharge your local LLM with different agents, long term memory and
   more!
 image: /articles/pcb_buttons.png
-last_update: '2024-03-02T12:45:58.401885+00:00'
+last_update: '2024-06-23T12:12:37.898270+00:00'
 layout: project
 repository: https://github.com/lufixSch/auto_llama
 repository_icon: github
@@ -37,19 +37,33 @@ Every package is designed to be used independently of all other packages (except
 
 ## Install
 
-At the moment it is not possible to install AutoLLaMa using `pip`. You need to install it from source.
+At the moment it is not possible to install AutoLLaMa using `pip`. You can either install the prebuild wheels from GitHub or install it directly from source.
+
+In order to make the package light weight there are optional dependencies defined separately for each package/submodule. You cann install them separately.
+
+_Example:_
+
+```bash
+pip install auto-llama[agents.code]
+pip install auto-llama[extras.text]
+```
+
+### Prebuild wheel
+
+There are prebuild wheels of this package available on the GitHub [releases](https://github.com/LufixSch/AutoLLaMa/releases). They can be installed as follows:
+
+```bash
+pip install auto-llama --index-url https://github.com/lufixSch/auto_llama/releases/download/latest/
+```
+
+> If you just want a specific version replace `latest` with the version you are interested in.
+
+### From source
 
 1. Clone the repository
 2. `pip install .` in the root directory of the repository
 
 In order to make the package light weight there are optional dependencies defined separately for each package. You cann install them separately.
-
-_Example:_
-
-```bash
-pip install .[agents.code]
-pip install .[extras.text]
-```
 
 ### Development
 
