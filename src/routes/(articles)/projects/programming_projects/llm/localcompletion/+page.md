@@ -6,7 +6,7 @@ last_update: '2024-07-29T20:43:49.527974+00:00'
 layout: project
 repository: https://github.com/lufixSch/LocalCompletion
 repository_icon: github
-status: stale
+status: stalled
 title: LocalCompletion
 update: https://raw.githubusercontent.com/lufixSch/LocalCompletion/main/README.md
 ---
@@ -66,3 +66,4 @@ Selected files in the `.gitignore` are not automatically removed from the additi
 ### No `git` installed
 
 In order to automatically ignore files in the `.gitignore` for the context I use a package which interacts with git. At the moment, I was not able to test the extension without `git` installed. If you encounter any issues please let me know.
+
