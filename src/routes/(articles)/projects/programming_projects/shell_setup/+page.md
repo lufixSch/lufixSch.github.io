@@ -2,11 +2,11 @@
 description: A template for easily backing up and setting up shell configurations
   and various other system components.
 image: /articles/projects/jungle.png
-last_update: '2024-06-23T12:12:37.898270+00:00'
+last_update: '2024-07-29T20:43:49.527974+00:00'
 layout: project
 repository: https://github.com/lufixSch/shell_setup
 repository_icon: github
-status: wip
+status: stale
 title: Shell Setup
 update: https://raw.githubusercontent.com/lufixSch/shell_setup/main/README.md
 ---
