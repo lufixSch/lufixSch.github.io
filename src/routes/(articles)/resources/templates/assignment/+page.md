@@ -1,7 +1,7 @@
 ---
 description: LaTex template for assignments, particularly for university purposes
 image: null
-last_update: '2024-07-29T20:43:49.527974+00:00'
+last_update: '2024-12-28T19:34:24.479115+00:00'
 layout: article
 repository: https://github.com/lufixSch/assignment_template
 repository_icon: github

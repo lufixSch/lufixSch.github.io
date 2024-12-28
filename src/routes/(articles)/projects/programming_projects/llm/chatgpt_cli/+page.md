@@ -1,7 +1,7 @@
 ---
 description: An unofficial command line interface for interacting with ChatGPT.
 image: /articles/pcb_circle.png
-last_update: '2024-07-29T20:43:49.527974+00:00'
+last_update: '2024-12-28T19:34:24.479115+00:00'
 layout: project
 repository: https://github.com/lufixSch/chatgpt_cli.git
 repository_icon: github

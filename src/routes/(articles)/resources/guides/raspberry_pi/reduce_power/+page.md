@@ -2,7 +2,7 @@
 description: How to reduce the power consumption of a Raspberry Pi by deactivating
   certain components.
 image: null
-last_update: '2024-07-29T20:43:49.527974+00:00'
+last_update: '2024-12-28T19:34:24.479115+00:00'
 layout: article
 repository: https://github.com/lufixSch/guides
 repository_icon: github

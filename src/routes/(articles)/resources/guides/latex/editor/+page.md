@@ -1,7 +1,7 @@
 ---
 description: How to set up and configure a Latex environment using Visual Studio Code
 image: null
-last_update: '2024-07-29T20:43:49.527974+00:00'
+last_update: '2024-12-28T19:34:24.479115+00:00'
 layout: article
 repository: https://github.com/lufixSch/guides.git
 repository_icon: github

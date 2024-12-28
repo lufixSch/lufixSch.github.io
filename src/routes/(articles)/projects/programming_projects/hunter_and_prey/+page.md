@@ -2,7 +2,7 @@
 description: A 2D game where neural networks compete as hunters and prey, trying to
   survive.
 image: /articles/projects/jungle.png
-last_update: '2024-07-29T20:43:49.527974+00:00'
+last_update: '2024-12-28T19:34:24.479115+00:00'
 layout: project
 repository: https://github.com/lufixSch/hunter_and_prey.git
 repository_icon: github

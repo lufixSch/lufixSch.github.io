@@ -2,7 +2,7 @@
 description: A template for easily backing up and setting up shell configurations
   and various other system components.
 image: /articles/projects/jungle.png
-last_update: '2024-07-29T20:43:49.527974+00:00'
+last_update: '2024-12-28T19:34:24.479115+00:00'
 layout: project
 repository: https://github.com/lufixSch/shell_setup
 repository_icon: github
@@ -68,4 +68,3 @@ sf FALSE # Hide files
 ### discord-activate-vcam
 
 Remove Discord's code signature so it can be used with VCam (might be unnecessary now)
-
