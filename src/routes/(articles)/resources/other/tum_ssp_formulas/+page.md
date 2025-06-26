@@ -1,7 +1,7 @@
 ---
 description: A collection of statistical signal processing formulas for TUM
 image: null
-last_update: '2024-12-28T19:34:24.479115+00:00'
+last_update: '2025-06-26T16:12:31.404292+00:00'
 layout: article
 repository: https://github.com/lufixSch/tum_ssp_formulas
 repository_icon: github

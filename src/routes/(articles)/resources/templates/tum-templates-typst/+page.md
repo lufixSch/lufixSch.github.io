@@ -1,7 +1,7 @@
 ---
 description: TUM Templates for Typst. Based on the LaTex4EI templates.
 image: null
-last_update: '2024-12-28T19:34:24.479115+00:00'
+last_update: '2025-06-26T16:12:31.404292+00:00'
 layout: article
 repository: https://github.com/lufixSch/tum-templates-typst
 repository_icon: github
@@ -12,7 +12,7 @@ update: https://raw.githubusercontent.com/lufixSch/tum-templates-typst/refs/head
 
 # TUM Templates for Typst
 
-TUM Templates for Typst. Based on the [LaTex4EI](https://gitlab.lrz.de/latex4ei/tum-templates) templates.
+__Inoficial__ TUM Templates for Typst. Based on the [LaTex4EI](https://gitlab.lrz.de/latex4ei/tum-templates) templates.
 
 ## Installation
 
@@ -33,7 +33,7 @@ Here `{data-dir}` is the directory for local Typst packages:
 Afterwards the package can be imported:
 
 ```
-#import "@local/tum-templates:0.2.0": *
+#import "@local/tum-templates:0.3.0": *
 
 ...
 ```
@@ -48,11 +48,12 @@ Currently, the following templates are supported:
 
 - Article (`tum-article`): Generic scientific article
 - Beamer (`tum-beamer`): Presentation slides based on the [touying](https://typst.app/universe/package/touying) package
+- Cheat-Sheet (`tum-sheat-sheet`): Cheat-sheet for exams
 
 The template is initialized as follows. Arguments change depending on the specific template.
 
 ```
-#import "@local/tum-templates:0.2.0": *
+#import "@local/tum-templates:0.3.0": *
 
 #show template.with(...)
 ```
@@ -65,3 +66,4 @@ The package also provides the following utility functions and variables:
 - `tum-blue`: The TUM Brand Color
 - `tum-info-block`: Builds the TUM affiliation block often visible at the top of a document
 - `tum-author`: Builds an Author object as expected by some templates (for example `tum-article`)
+- `tum-emphasize`: Emphasize text by creating a bordered block with colors depending on the severity
