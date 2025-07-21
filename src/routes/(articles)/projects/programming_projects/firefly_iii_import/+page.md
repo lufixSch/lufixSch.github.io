@@ -1,7 +1,7 @@
 ---
 description: Automatic bank transaction import tool for Firefly III
 image: /articles/pcb_buttons.png
-last_update: '2025-06-26T16:12:31.404292+00:00'
+last_update: '2025-07-21T10:29:06.883332+00:00'
 layout: project
 repository: https://github.com/lufixSch/firefly-iii-import
 repository_icon: github

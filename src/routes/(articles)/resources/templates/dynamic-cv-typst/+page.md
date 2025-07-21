@@ -1,11 +1,11 @@
 ---
 description: Typst toolbox for dynamically generating CVs based on YAML files.
 image: null
-last_update: '2025-06-26T16:12:31.404292+00:00'
+last_update: '2025-07-21T10:29:06.883332+00:00'
 layout: article
 repository: https://github.com/lufixSch/dynamic-cv-typst
 repository_icon: github
-status: wip
+status: finished
 title: Dynamic CV (Typst)
 update: https://raw.githubusercontent.com/lufixSch/dynamic-cv-typst/refs/heads/main/README.md
 ---
@@ -60,6 +60,8 @@ Other information like education, work or skills can be written using one of two
 ```yaml
 # List of the item
 - title: "Bachelor of Science (BSc)"
+  # Importance Level (optional), should be a number between 1 and 3 (defaults to 3)
+  importance: 3
   # Description (optional), can be multiline
   description: "Computer Science, University of Example"
   # Attendance dates
@@ -80,10 +82,15 @@ Other information like education, work or skills can be written using one of two
 # First category
 - category: "Language Skills"
 
+  # Importance Level (optional), should be a number between 1 and 3 (defaults to 3)
+  importance: 3
+
   # List of items in that category
   items:
     # Name of the skill
     - name: English
+      # Importance Level (optional), should be a number between 1 and 3 (defaults to 3)
+      importance: 3
       # Description or details, can be multiline
       description: Native speaker
 
@@ -117,9 +124,6 @@ Start your Typst document with the `cv` template. Provide the paths to your YAML
 
   // Default column ratios for tables
   columns: (1fr, 3fr),
-
-  // Language
-  lang: "en"
 )
 ```
 
@@ -134,7 +138,7 @@ The information from your YAML files can then be displayed in a structured way u
 
 ```
 #context {
-  let cfg = config.get().keywords
+  let cfg = config.get()
   let info = information.get().personal
 
   personal_table(cfg, info, profile)
@@ -144,10 +148,23 @@ The information from your YAML files can then be displayed in a structured way u
 > NOTE: If the personal config contains a profile picture path, the `profile` function is used to place the picture.
 > Use `profile.with(...)` with custom parameters to change the position of the picture.
 
+### Utility Functions
+
 This repo provides further utility functions to make parsing of the YAML files and building a CV easier.
 
 - `get_date`: Convert `date` from YAML file into corresponding string.
 - `signature`: Draw a signature field with place and date.
+
+### Importance
+
+The `importance` key is a way to adjust the size and complexity of your CV according to your need. The `importance` of you CV is provided with the configuration:
+
+```
+#let cfg = config_trasnlations.en
+#cfg.insert("importance", 2)
+```
+
+Given this value functions like `personal_table` and `timeline_table` will only display items with an importance **greater** than or **equal** to this value.
 
 ## Styling
 

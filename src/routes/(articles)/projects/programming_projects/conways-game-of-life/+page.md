@@ -2,7 +2,7 @@
 description: A web-based implementation of Conway's Game of Life using Node.js and
   Express.js for an API.
 image: /articles/pcb_circle.png
-last_update: '2025-06-26T16:12:31.404292+00:00'
+last_update: '2025-07-21T10:29:06.883332+00:00'
 layout: project
 repository: https://github.com/lufixSch/conways-game-of-life.git
 repository_icon: github
