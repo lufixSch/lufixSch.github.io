@@ -55,6 +55,7 @@
 
 <style lang="postcss">
     @reference "tailwindcss";
+    @config "../../tailwind.config.js";
 
 	section:nth-child(2n) {
 		@apply bg-gray-100 dark:bg-gray-800;

@@ -59,6 +59,7 @@
 
 <style lang="postcss">
     @reference "tailwindcss";
+    @config "../../../tailwind.config.js";
 
 	a {
 		@apply text-gray-900 dark:text-gray-100;

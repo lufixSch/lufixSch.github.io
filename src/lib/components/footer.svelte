@@ -21,6 +21,7 @@
 
 <style lang="postcss">
     @reference "tailwindcss";
+    @config "../../../tailwind.config.js";
 
 	p {
 		@apply text-sm px-1;

@@ -6,7 +6,7 @@
 	}
 </script>
 
-<li>
+<li class="list-none">
 	{#if indent(slug) < 1}
 		<h4 style="margin-left: {indent(slug) * 12}px;"><slot /></h4>
 	{:else if indent(slug) < 2}
