@@ -38,7 +38,7 @@
 	</div>
 	<div>
 		<p>{repo_name}</p>
-		<p class="m-0">
+		<div class="m-0">
 			<span>
 				Status: <div class="h-[1.25rem] w-[1.25rem] inline-block align-middle mb-1">
 					{#if status == 'finished'}
@@ -124,6 +124,6 @@
 					{/if}
 				</div>
 			</span>
-		</p>
+		</div>
 	</div>
 </a>

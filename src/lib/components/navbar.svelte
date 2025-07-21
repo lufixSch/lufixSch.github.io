@@ -58,6 +58,8 @@
 </nav>
 
 <style lang="postcss">
+    @reference "tailwindcss";
+
 	a {
 		@apply text-gray-900 dark:text-gray-100;
 	}

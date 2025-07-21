@@ -20,6 +20,8 @@
 </footer>
 
 <style lang="postcss">
+    @reference "tailwindcss";
+
 	p {
 		@apply text-sm px-1;
 	}

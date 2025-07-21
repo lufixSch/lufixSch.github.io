@@ -1,7 +1,8 @@
+import Path from "path"
 import adapter from '@sveltejs/adapter-static';
-import { vitePreprocess } from '@sveltejs/kit/vite';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
-import { mdsvex } from 'mdsvex';
+import { mdsvex, defineMDSveXConfig } from 'mdsvex';
 import highlighter from './src/lib/util/codeHighlighter.mjs';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -10,19 +11,19 @@ const config = {
 	// for more information about preprocessors
 	extensions: ['.svelte', '.md'],
 	preprocess: [
-		mdsvex({
+		vitePreprocess(),
+		mdsvex(defineMDSveXConfig({
 			extensions: ['.md'],
 			layout: {
-				_: 'src/lib/layouts/default.svelte',
-				project: 'src/lib/layouts/article.svelte',
-				article: 'src/lib/layouts/article.svelte',
-				error: 'src/lib/layouts/error.svelte'
+				_: Path.resolve('./src/lib/layouts/default.svelte'),
+				project: Path.resolve('./src/lib/layouts/article.svelte'),
+				article: Path.resolve('./src/lib/layouts/article.svelte'),
+				error: Path.resolve('./src/lib/layouts/error.svelte')
 			},
 			highlight: {
 				highlighter
 			}
-		}),
-		vitePreprocess()
+		})),
 	],
 
 	kit: {

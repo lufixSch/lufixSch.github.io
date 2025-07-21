@@ -54,6 +54,8 @@
 <!--<section id="updates" />-->
 
 <style lang="postcss">
+    @reference "tailwindcss";
+
 	section:nth-child(2n) {
 		@apply bg-gray-100 dark:bg-gray-800;
 	}

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Navbar from '../lib/components/navbar.svelte';
-	import '../app.postcss';
+	import '../app.css';
 
 	import { theme } from '$lib/stores';
 	import { onMount } from 'svelte';
@@ -16,10 +16,10 @@
 	});
 </script>
 
-<Navbar />
-<div class="min-h-screen flex flex-col justify-between">
-	<body class="">
+<body class="min-h-screen flex flex-col justify-between">
+    <Navbar />
+	<div class="">
 		<slot />
-	</body>
+	</div>
 	<Footer />
-</div>
+</body>
