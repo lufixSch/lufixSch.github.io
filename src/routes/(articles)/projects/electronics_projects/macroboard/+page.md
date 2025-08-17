@@ -1,7 +1,7 @@
 ---
 description: DIY Macro keyboard with pedal support based on Arduino Micro
 image: /articles/pcb_buttons.png
-last_update: '2025-08-17T12:42:14.498592+00:00'
+last_update: '2025-08-17T13:03:33.239902+00:00'
 layout: project
 repository: https://github.com/lufixSch/macroboard.git
 repository_icon: github

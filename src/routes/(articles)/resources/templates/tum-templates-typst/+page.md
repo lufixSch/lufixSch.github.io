@@ -1,7 +1,7 @@
 ---
 description: TUM Templates for Typst. Based on the LaTex4EI templates.
 image: null
-last_update: '2025-08-17T12:42:14.498592+00:00'
+last_update: '2025-08-17T13:03:33.239902+00:00'
 layout: article
 repository: https://github.com/lufixSch/tum-templates-typst
 repository_icon: github

@@ -29,18 +29,20 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-      - name: Setup Python
-        uses: actions/setup-python@v4
+      - name: "Set up Python"
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
-          cache: 'pip'
+          python-version-file: ".python-version"
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install Dependencies
         run: |
           npm ci
-          python -m pip install --upgrade pip
-          python -m pip install -r requirements.txt
+          uv python install
+          uv sync --locked --all-extras --dev
       - name: Build Page
         run: npm run build
       - name: Upload artifact
