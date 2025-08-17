@@ -1,7 +1,7 @@
 ---
 description: Quick Access LLM Assistant
 image: /articles/pcb_buttons.png
-last_update: '2025-07-21T10:29:06.883332+00:00'
+last_update: '2025-08-17T12:42:14.498592+00:00'
 layout: project
 repository: https://github.com/lufixSch/iris-assistant
 repository_icon: github

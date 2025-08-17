@@ -17,57 +17,7 @@ from os import walk
 from argparse import ArgumentParser
 from requests import get
 
-import openai
-
-API_ENDPOINT = "http://localhost:5000/v1"
-DESCRIPTION_PROMPT = """###Instruction
-Your goal is to create an one sentence description of a project or guide based on its documentation. A good description formulates the main goal and aim of the project.
-It starts directly with the main goal or use case. A good description is the direct answer to "What is the goal of project <project_name>?"
-
-Good examples of descriptions are:
-A python Implementation of the Snake Game
-Setup guide for a Sphinx based documentation page
-Library for easier access to the GitHub API
-Circuits and PCB designs for a smartome LED stripe controller
-
-Remember: The description should be in plain text (no markdown), in the language of the documentation and only one short sentence
-
-Documentation:
-{content}
-
-
-### Response:"""
-
 TIMESTAMP = datetime.now(ZoneInfo("UTC")).isoformat()
-
-
-class LLM:
-    """LLM Interface calling the oobabooga api for text generation"""
-
-    def __init__(
-        self,
-        api_endpoint: str,
-        temperature: float = 0.5,
-        max_new_tokens: int = 200,
-    ):
-        self.api_endpoint = api_endpoint
-        self.temperature = temperature
-        self.max_new_tokens = max_new_tokens
-
-        self.client = openai.OpenAI(api_key="NONE", base_url=self.api_endpoint)
-
-    def completion(
-        self,
-        prompt: str,
-    ) -> str:
-        res = self.client.completions.create(
-            model="NONE",
-            prompt=prompt,
-            temperature=self.temperature,
-            max_tokens=self.max_new_tokens,
-        )
-
-        return res.choices[0].text
 
 
 def find_articles(base_path: str):
@@ -166,34 +116,6 @@ def replace_content(articles: Iterable[tuple[str, fr.Post, str]]):
         yield path, article
 
 
-def generate_description(
-    articles: Iterable[tuple[str, fr.Post]],
-    llm: LLM,
-    update: bool = False,
-):
-    """
-    Generate a description for an article using the language model.
-    """
-
-    for path, article in articles:
-        if article.get("description", None) and not update:
-            yield path, article
-            continue
-
-        print("> Generating Description")
-
-        prompt = DESCRIPTION_PROMPT.format(content=article.content)
-
-        try:
-            description = llm.completion(prompt)
-        except ValueError:
-            print(f"Failed to generate description for {article['title']}")
-
-        article["description"] = description.strip()
-
-        yield path, article
-
-
 def set_timestamp(articles: Iterable[tuple[str, fr.Post]]):
     """
     Set the timestamp of the update for the article
@@ -222,22 +144,7 @@ if __name__ == "__main__":
         default="src",
         help="Path in which to search for markdown files",
     )
-    parser.add_argument(
-        "-u",
-        "--update-description",
-        action="store_true",
-        help="Update the LLM generated descriptions (If false only missing descriptions are generated)",
-    )
-    parser.add_argument(
-        "-a",
-        "--api-endpoint",
-        type=str,
-        default=API_ENDPOINT,
-        help="API Endpoint for the Oobabooga WebUI",
-    )
     args = parser.parse_args()
-
-    llm = LLM(args.api_endpoint, temperature=0.2, max_new_tokens=50)
 
     paths = find_articles(args.base_path)
     load_articles = load_articles(paths)
@@ -245,8 +152,7 @@ if __name__ == "__main__":
     updates = pull_updates(filtered_articles)
     fixed_updates = fix_urls(updates)
     new_articles = replace_content(fixed_updates)
-    final_articles = generate_description(new_articles, llm, args.update_description)
-    final_articles = set_timestamp(final_articles)
+    final_articles = set_timestamp(new_articles)
 
     save_articles(final_articles)
 

@@ -1,7 +1,7 @@
 ---
 description: Typst toolbox for dynamically generating CVs based on YAML files.
 image: null
-last_update: '2025-07-21T10:29:06.883332+00:00'
+last_update: '2025-08-17T12:42:14.498592+00:00'
 layout: article
 repository: https://github.com/lufixSch/dynamic-cv-typst
 repository_icon: github
