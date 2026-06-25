@@ -1,7 +1,7 @@
 ---
 description: Quick Access LLM Assistant
 image: /articles/pcb_buttons.png
-last_update: '2025-08-17T13:03:33.239902+00:00'
+last_update: '2026-06-25T12:28:38.855996+00:00'
 layout: project
 repository: https://github.com/lufixSch/iris-assistant
 repository_icon: github
@@ -56,6 +56,8 @@ The GUI application reads context from standard input. To start it, run:
 iris-gui < path/to/context.txt
 ```
 
+> The application also supports image input in binary. Currently only the PNG format is supported
+
 #### Keyboard Shortcuts
 
 **Initial View:**
@@ -70,6 +72,7 @@ iris-gui < path/to/context.txt
 
 Replace `path/to/context.txt` with the path to your context file or use any other method to provide input via stdin.
 
+
 ### Using the Library
 
 You can also use Iris as a library in your Rust projects. Add it to your `Cargo.toml`:
@@ -82,11 +85,11 @@ iris = { path = "../path/to/iris/lib" }
 Here is an example of how to use the library:
 
 ```rust
-use iris::{Actions, run};
+use iris::{Actions, run, Context};
 use iris::IrisConfig;
 
 fn main() {
-    let context = "The Earth orbits the Sun at an average distance of about 149.6 million kilometers.";
+    let context = Context::Text("The Earth orbits the Sun at an average distance of about 149.6 million kilometers.");
     let user_input = Some("What is the distance between the earth and the moon?");
     let config = IrisConfig::load().unwrap_or_default();
 
