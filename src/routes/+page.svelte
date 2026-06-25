@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Index from '$lib/components/index.svelte';
+	import GroupedCardGrid from '$lib/components/grouped_card_grid.svelte';
 	import Section from '$lib/components/section.svelte';
 
 	export let data;
@@ -29,7 +29,7 @@
 <section id="projects">
 	<Section title="Projects">
 		<p class="mb-2 pb-2 border-b-2">Here are some of the projects I've worked on over the years.</p>
-		<Index articles={projects} />
+		<GroupedCardGrid articles={projects} />
 	</Section>
 </section>
 
@@ -39,6 +39,6 @@
 			This section contains all the resources I have created. This includes templates, formula sheets,
 			and some guides. I hope you find them useful.
 		</p>
-		<Index articles={resources} />
+		<GroupedCardGrid articles={resources} />
 	</Section>
 </section>
