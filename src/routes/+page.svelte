@@ -1,9 +1,9 @@
 <script lang="ts">
-	import OverviewCard from '$lib/components/overview_card.svelte';
+	import Index from '$lib/components/index.svelte';
 	import Section from '$lib/components/section.svelte';
 
 	export let data;
-	const { projects, resources, updates } = data;
+	const { projects, resources } = data;
 </script>
 
 <svelte:head>
@@ -28,33 +28,17 @@
 
 <section id="projects">
 	<Section title="Projects">
-		<div
-			class="flex w-full justify-between items-center md:items-stretch flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6"
-		>
-			{#each projects as project}
-				<OverviewCard metadata={project.metadata} slug={project.slug} bg="background" />
-			{/each}
-		</div>
+		<p class="mb-2 pb-2 border-b-2">Here are some of the projects I've worked on over the years.</p>
+		<Index articles={projects} />
 	</Section>
 </section>
 
-<section id="ressources">
-	<Section title="Ressources">
-		<div
-			class="flex w-full justify-between items-center md:items-stretch flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6"
-		>
-			{#each resources as ressource}
-				<OverviewCard metadata={ressource.metadata} slug={ressource.slug} bg="surface" />
-			{/each}
-		</div>
+<section id="resources">
+	<Section title="Resources">
+		<p class="mb-2 pb-2 border-b-2">
+			This section contains all the resources I have created. This includes templates, formula sheets,
+			and some guides. I hope you find them useful.
+		</p>
+		<Index articles={resources} />
 	</Section>
 </section>
-
-<!--WIP - Need to add some blog posts/updates first-->
-<!--<section id="updates" />-->
-
-<style lang="postcss">
-	section:nth-child(2n) {
-		@apply bg-gray-100 dark:bg-gray-800;
-	}
-</style>

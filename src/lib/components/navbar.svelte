@@ -1,14 +1,34 @@
 <script lang="ts">
-	import { page } from '$app/stores';
 	import { theme } from '../stores';
+	import { onMount } from 'svelte';
 
 	let open_menu = false;
+	let active_section = 'about-me';
 
 	const routes = [
-		{ path: '/projects', name: 'Projects' },
-		{ path: '/resources', name: 'Resources' },
-		{ path: '/updates', name: 'Updates' }
+		{ path: '#projects', name: 'Projects', id: 'projects' },
+		{ path: '#resources', name: 'Resources', id: 'resources' }
 	];
+
+	onMount(() => {
+		const sections = document.querySelectorAll('section[id]');
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						active_section = entry.target.id;
+					}
+				});
+			},
+			{ threshold: 0.5, rootMargin: '-80px 0px -60% 0px' }
+		);
+
+		sections.forEach((section) => observer.observe(section));
+
+		return () => {
+			sections.forEach((section) => observer.unobserve(section));
+		};
+	});
 </script>
 
 <nav class="z-20 bg-gray-100 dark:bg-gray-800 fixed top-0 left-0 w-full">
@@ -25,7 +45,7 @@
 		<ul class="hidden sm:flex flex-row">
 			{#each routes as route}
 				<li>
-					<a class:active={$page.url.pathname.includes(route.path)} href={route.path}
+					<a class:active={active_section === route.id} href={route.path}
 						>{route.name}</a
 					>
 				</li>
@@ -50,7 +70,7 @@
 		<ul class="flex-row" id="main-menu">
 			{#each routes as route}
 				<li>
-					<a class:active={$page.url.pathname === route.path} href={route.path}>{route.name}</a>
+					<a class:active={active_section === route.id} href={route.path}>{route.name}</a>
 				</li>
 			{/each}
 		</ul>
