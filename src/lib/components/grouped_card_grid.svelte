@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { mdMetaData } from '$lib/types';
-	import Card from './project_card.svelte';
+	import Card from './article_card.svelte';
 
 	interface Article {
 		slug: string;
@@ -32,7 +32,6 @@
 
 			if (metadata?.header) {
 				category = metadata?.title;
-				console.log(category);
 				result.groups[category] = { level, articles: [] };
 				return;
 			}
@@ -52,7 +51,7 @@
 
 {#if grouped.uncategorized.length > 0}
 	<div class="mb-8">
-		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
 			{#each grouped.uncategorized as article}
 				<Card {article} />
 			{/each}
