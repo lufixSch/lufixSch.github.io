@@ -60,15 +60,35 @@
 		@apply text-primary-700 dark:text-primary-dark-400;
 		@apply hover:text-primary hover:dark:text-primary-dark;
 		@apply hover:underline;
+		@apply transition-colors duration-200;
 	}
 
 	ul {
 		@apply list-disc ml-4;
+		@apply space-y-1;
 	}
 
-        blockquote {
-                @apply p-2 m-2 bg-gray-200 dark:bg-gray-800 rounded-md
-        }
+	blockquote {
+		@apply border-l-4 border-primary dark:border-primary-dark;
+		@apply bg-gray-50 dark:bg-gray-900;
+		@apply pl-4 py-2 my-4;
+		@apply rounded-r-lg;
+		@apply italic;
+	}
+
+	.callout {
+		@apply my-4 rounded-lg;
+		@apply border-l-4;
+	}
+
+	.callout-title {
+		@apply font-bold mb-2 flex items-center gap-2;
+		@apply text-sm uppercase tracking-wide;
+	}
+
+	.callout-content {
+		@apply not-italic;
+	}
 }
 
 @tailwind components;

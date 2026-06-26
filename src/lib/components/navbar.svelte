@@ -17,8 +17,6 @@
 			observer.disconnect();
 		}
 
-        console.log("Setup Observer")
-
 		const sections = document.querySelectorAll('section[id]');
 		const newObserver = new IntersectionObserver(
 			(entries) => {
@@ -110,6 +108,7 @@
 
 	ul {
 		@apply list-none;
+        @apply space-y-0;
 	}
 	li a {
 		@apply block px-4 py-4 font-medium uppercase;

@@ -1,84 +1,130 @@
-code {
-	font-family: IBM Plex Mono;
-	counter-reset: step;
-	counter-increment: step 0;
-}
-
-p code {
-	@apply bg-gray-100 dark:bg-gray-700;
-	@apply px-1 rounded-sm;
-}
-
-.shiki {
+code[class*="language-"],
+pre[class*="language-"] {
 	@apply text-gray-100;
-	@apply p-4 mx-auto my-4;
-	@apply rounded-md;
+	font-family: Consolas, Monaco, "Andale Mono", monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	line-height: 1.5;
 
-	overflow-x: auto;
-	max-width: var(--max-width-full);
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
 }
 
-.highlight-line {
-	display: inline-block;
-	background-color: var(--colour-code-background-highlighted);
-	width: calc(var(--max-width-full) + var(--spacing-4));
-	border-left: var(--spacing-1) solid var(--colour-code-line-highlight);
-	margin-left: calc(-1 * var(--spacing-1));
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
+	@apply text-gray-50;
+	@apply bg-gray-600;
 }
 
-:root {
-	--colour-brand: hsl(193 67% 34%); /* elm */
-	--colour-light: hsl(7 53% 97%); /* fantasy */
-
-	--colour-code-line-numbers: hsl(219 14% 71% / 0.8);
-	--colour-code-line-highlight: hsl(34 96% 55%);
-	--colour-code-background-hue: 220;
-	--colour-code-background-saturation: 13%;
-	--colour-code-background-lightness: 18%;
-	--colour-code-background-highlighted: hsl(
-		var(--colour-code-background-hue) var(--colour-code-background-saturation)
-			calc(var(--colour-code-background-lightness) + 5%)
-	);
-
-	--spacing-px: 1px;
-	--spacing-px-2: 2px;
-	--spacing-0: 0;
-	--spacing-1: 0.25rem;
-	--spacing-2: 0.5rem;
-	--spacing-4: 1rem;
-	--spacing-6: 1.5rem;
-	--spacing-12: 3rem;
-	--spacing-18: 4.5rem;
-	--max-width-wrapper: 48rem;
-	--max-width-full: 100%;
-
-	--font-size-root: 16px;
-	--font-size-3: 1.563rem;
-	--font-size-4: 1.953rem;
-	--font-size-5: 2.441rem;
-	--font-size-6: 3.052rem;
-
-	--font-weight-normal: 400;
-	--font-weight-semibold: 600;
-	--font-weight-bold: 700;
-
-	--line-height-normal: 1.5;
-
-	/* CREDIT: https://www.joshwcomeau.com/shadow-palette/ */
-	--shadow-color: 194deg 84% 18%;
-	--shadow-elevation-medium: -1px 1px 1.6px hsl(var(--shadow-color) / 0.36),
-		-3.3px 3.3px 5.3px -0.8px hsl(var(--shadow-color) / 0.36),
-		-8.2px 8.2px 13px -1.7px hsl(var(--shadow-color) / 0.36),
-		-20px 20px 31.8px -2.5px hsl(var(--shadow-color) / 0.36);
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
+	@apply text-gray-50;
+	@apply bg-gray-600;
 }
 
-code .line::before {
-	display: inline-block;
-	content: counter(step);
-	counter-increment: step;
-	width: var(--spacing-6);
-	margin-right: var(--spacing-6);
-	text-align: right;
-	font-variant-numeric: tabular-nums;
-	color: var(--colour-line-numbers);
+/* Code blocks */
+pre[class*="language-"] {
+	@apply p-4 my-2 rounded-lg border border-gray-200 dark:border-gray-700;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	@apply bg-white dark:bg-gray-800;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	@apply px-1 rounded-lg bg-gray-100 dark:bg-gray-700;
+}
+
+.token.comment,
+.token.prolog,
+.token.cdata {
+	@apply text-gray-300;
+}
+
+.token.delimiter,
+.token.boolean,
+.token.keyword,
+.token.selector,
+.token.important,
+.token.atrule {
+	@apply text-red-600 dark:text-red-400;
+}
+
+.token.operator,
+.token.punctuation,
+.token.attr-name {
+	@apply text-gray-300;
+}
+
+.token.tag,
+.token.tag .punctuation,
+.token.doctype,
+.token.builtin {
+	@apply text-yellow-600 dark:text-yellow-400;
+}
+
+.token.entity,
+.token.number,
+.token.symbol {
+	@apply text-pink-400 dark:text-pink-300;
+}
+
+.token.property,
+.token.constant,
+.token.variable {
+	@apply text-red-500 dark:text-red-400;
+}
+
+.token.string,
+.token.char {
+	@apply text-green-500 dark:text-green-400;
+}
+
+.token.attr-value,
+.token.attr-value .punctuation {
+	@apply text-gray-300;
+}
+
+.token.url {
+	@apply text-green-500 dark:text-green-400 underline;
+}
+
+.token.function {
+	@apply text-yellow-500 dark:text-yellow-400;
+}
+
+.token.regex {
+	@apply bg-green-500 dark:bg-green-400;
+}
+
+.token.bold {
+	font-weight: bold;
+}
+
+.token.italic {
+	font-style: italic;
+}
+
+.token.inserted {
+	@apply bg-green-500 dark:bg-green-400;
+}
+
+.token.deleted {
+	@apply bg-red-500 dark:bg-red-400;
 }

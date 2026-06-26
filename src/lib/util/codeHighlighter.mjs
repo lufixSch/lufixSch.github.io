@@ -5,7 +5,7 @@
 import { parse } from 'node-html-parser';
 import { getHighlighter } from 'shiki';
 
-//const THEME = 'github-dark';
+// const THEME = 'github-dark';
 
 //console.log('highlighter.js');
 
@@ -62,7 +62,7 @@ function makeFocussable(html) {
  */
 async function highlighter(code, lang, meta) {
 	const shikiHighlighter = await getHighlighter({
-		//		theme: THEME
+		// theme: THEME
 	});
 
 	let html;
