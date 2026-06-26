@@ -27,7 +27,6 @@ jobs:
       - name: Setup Node.js
         uses: pnpm/action-setup@v6
         with:
-          version: 10
           cache: true
       - name: Setup Python
         uses: actions/setup-python@v5
