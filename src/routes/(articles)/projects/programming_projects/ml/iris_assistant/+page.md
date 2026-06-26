@@ -1,6 +1,6 @@
 ---
 description: Quick Access LLM Assistant
-last_update: '2026-06-25T12:28:38.855996+00:00'
+last_update: '2026-06-26T19:53:44.407143+00:00'
 layout: project
 repository: https://github.com/lufixSch/iris-assistant
 repository_icon: github

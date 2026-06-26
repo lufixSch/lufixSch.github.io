@@ -25,26 +25,25 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: pnpm/action-setup@v6
         with:
-          node-version: '20'
-          cache: 'npm'
-      - name: "Set up Python"
+          version: 10
+          cache: true
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version-file: ".python-version"
+          python-version-file: '.python-version'
       - name: Install uv
         uses: astral-sh/setup-uv@v6
-
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install Dependencies
         run: |
-          npm ci
+          pnpm install --frozen-lockfile
           uv python install
           uv sync --locked --all-extras --dev
       - name: Build Page
-        run: npm run build
+        run: pnpm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
