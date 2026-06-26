@@ -39,7 +39,7 @@
 				{metadata.status}
 			</span>
 			{#if metadata.repository_icon}
-				<span class="w-4 h-4 fill-gray-900 dark:fill-gray-100">
+				<span class="w-6 h-6 fill-gray-900 dark:fill-gray-100">
 					<RepoIcon icon_type={metadata.repository_icon} />
 				</span>
 			{/if}
