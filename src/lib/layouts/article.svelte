@@ -56,7 +56,7 @@
 	{/if}
 	<SourceCard source={repository} icon_type={repository_icon} {status} />
 </section>
-<article id="content">
+<article id="content" class="max-w-4xl mx-auto px-4">
 	<slot />
 	<p class="mt-4 mb-4 text-xs text-right">
 		Last page update: {moment(last_update).utc().format('dddd, MMMM Do YYYY, HH:mm:ss z')}

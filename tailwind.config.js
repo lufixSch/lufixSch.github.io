@@ -39,6 +39,40 @@ export default {
 					700: '#232124',
 					800: '#171618',
 					900: '#0c0b0c'
+				},
+				status: {
+					finished: {
+						DEFAULT: 'oklch(92.5% 0.084 155.995)',
+						dark: 'oklch(39.3% 0.095 152.535)',
+						text: {
+							DEFAULT: 'oklch(44.8% 0.119 151.328)',
+							dark: 'oklch(92.5% 0.084 155.995)'
+						}
+					},
+					wip: {
+						DEFAULT: 'oklch(88.2% 0.059 254.128)',
+						dark: 'oklch(37.9% 0.146 265.522)',
+						text: {
+							DEFAULT: 'oklch(42.4% 0.199 265.638)',
+							dark: 'oklch(88.2% 0.059 254.128)'
+						}
+					},
+					stalled: {
+						DEFAULT: 'oklch(94.5% 0.129 101.54)',
+						dark: 'oklch(42.1% 0.095 57.708)',
+						text: {
+							DEFAULT: 'oklch(47.6% 0.114 61.907)',
+							dark: 'oklch(94.5% 0.129 101.54)'
+						}
+					},
+					abandoned: {
+						DEFAULT: 'oklch(92.8% 0.006 264.531)',
+						dark: 'oklch(37.3% 0.034 259.733)',
+						text: {
+							DEFAULT: 'oklch(27.8% 0.033 256.848)',
+							dark: 'oklch(87.2% 0.01 258.338)'
+						}
+					}
 				}
 			}
 		}

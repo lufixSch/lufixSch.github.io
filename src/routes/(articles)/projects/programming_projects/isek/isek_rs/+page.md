@@ -1,7 +1,7 @@
 ---
 description: TUI for displaying tasks from ical files
 image: /articles/ise_logo.png
-last_update: '2025-08-17T13:03:33.239902+00:00'
+last_update: '2026-06-25T12:28:38.855996+00:00'
 layout: project
 repository: https://github.com/lufixSch/isek_rs.git
 repository_icon: github

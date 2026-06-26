@@ -6,16 +6,12 @@ Articles are generated from Markown files (Usually the README.md of the correspo
 
 ## Build
 
-In order to build the website first need to install the python dependencies for necessary for updating the markdown content.
+In order to build the website you need to have [uv](https://docs.astral.sh/uv/) installed for updating the markdown content.
+
+After this you can build the website using `pnpm`.
 
 ```bash
-pip install -r requirements.txt
-```
-
-After this you can build the website using `npm`.
-
-```bash
-npm run build
+pnpm run build
 ```
 
 This will run the markdown update script as well as the build command for SvelteKit.
@@ -27,7 +23,7 @@ This will run the markdown update script as well as the build command for Svelte
 The development server for the website can be started by executing
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 > NOTE: This command will not call the `update_articles` skript. It has to be executed manually if markdown content needs to be updated during development.
