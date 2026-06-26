@@ -1,7 +1,6 @@
 ---
 description: A VS Code extension for local, inline LLM based code completion using
   OpenAI compatible APIs like Oobabooga WebUI
-image: /articles/pcb_buttons.png
 last_update: '2026-06-25T12:28:38.855996+00:00'
 layout: project
 repository: https://github.com/lufixSch/LocalCompletion
