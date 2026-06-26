@@ -1,1 +1,3 @@
-<slot />
+<article>
+	<slot />
+</article>

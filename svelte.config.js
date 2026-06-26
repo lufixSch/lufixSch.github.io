@@ -1,9 +1,20 @@
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 import { mdsvex } from 'mdsvex';
 import highlighter from './src/lib/util/codeHighlighter.mjs';
 // import remarkCallouts from './src/lib/util/remarkCallouts.mjs';
+
+const layouts = {
+	default: join(__dirname, './src/lib/layouts/default.svelte'),
+	article: join(__dirname, './src/lib/layouts/article.svelte'),
+	error: join(__dirname, './src/lib/layouts/error.svelte')
+};
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -14,10 +25,10 @@ const config = {
 		mdsvex({
 			extensions: ['.md'],
 			layout: {
-				_: 'src/lib/layouts/default.svelte',
-				project: 'src/lib/layouts/article.svelte',
-				article: 'src/lib/layouts/article.svelte',
-				error: 'src/lib/layouts/error.svelte'
+				_: layouts.default,
+				project: layouts.article,
+				article: layouts.article,
+				error: layouts.error
 			},
 			highlight: {
 				highlighter
