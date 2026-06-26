@@ -10,7 +10,7 @@
 	body {
 		@apply text-gray-900 dark:text-gray-100;
 		@apply font-sans;
-		@apply font-light;
+		@apply font-normal;
 		@apply text-base;
 	}
 
@@ -51,8 +51,8 @@
 	}
 
 	p {
-		@apply text-sm md:text-base;
-		@apply font-light;
+		@apply text-base;
+		@apply font-normal;
 		@apply mb-1;
 	}
 
@@ -70,26 +70,36 @@
 
 	blockquote {
 		@apply border-l-4 border-primary dark:border-primary-dark;
-		@apply bg-gray-50 dark:bg-gray-900;
 		@apply pl-4 py-2 my-4;
-		@apply rounded-r-lg;
 		@apply italic;
-	}
-
-	.callout {
-		@apply my-4 rounded-lg;
-		@apply border-l-4;
-	}
-
-	.callout-title {
-		@apply font-bold mb-2 flex items-center gap-2;
-		@apply text-sm uppercase tracking-wide;
-	}
-
-	.callout-content {
-		@apply not-italic;
 	}
 }
 
 @tailwind components;
 @tailwind utilities;
+
+.callout {
+	@apply my-4;
+	@apply border-l-4;
+}
+
+.callout-note {
+    @apply border-status-wip dark:border-status-wip-dark;
+}
+
+.callout-tip {
+    @apply border-status-finished dark:border-status-finished-dark;
+}
+
+.callout-warning {
+    @apply border-status-stalled dark:border-status-stalled-dark;
+}
+
+.callout-title {
+	@apply font-bold not-italic mb-2 flex items-center gap-2;
+	@apply text-sm uppercase tracking-wide;
+}
+
+.callout-content {
+	@apply not-italic;
+}

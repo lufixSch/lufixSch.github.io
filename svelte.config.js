@@ -8,7 +8,7 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 import { mdsvex } from 'mdsvex';
 import highlighter from './src/lib/util/codeHighlighter.mjs';
-// import remarkCallouts from './src/lib/util/remarkCallouts.mjs';
+import remarkCallouts from './src/lib/util/remarkCallouts.mjs';
 
 const layouts = {
 	default: join(__dirname, './src/lib/layouts/default.svelte'),
@@ -33,7 +33,9 @@ const config = {
 			highlight: {
 				highlighter
 			},
-			remarkPlugins: []
+			remarkPlugins: [
+                remarkCallouts
+            ]
 		}),
 		vitePreprocess()
 	],
