@@ -5,7 +5,7 @@ last_update: '2026-06-25T12:28:38.855996+00:00'
 layout: article
 repository: https://github.com/lufixSch/assignment_template
 repository_icon: github
-status: wip
+status: finished
 title: Assignment
 update: https://raw.githubusercontent.com/lufixSch/assignment_template/main/README.md
 ---
