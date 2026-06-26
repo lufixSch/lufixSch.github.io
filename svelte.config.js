@@ -3,6 +3,7 @@ import { vitePreprocess } from '@sveltejs/kit/vite';
 
 import { mdsvex } from 'mdsvex';
 import highlighter from './src/lib/util/codeHighlighter.mjs';
+// import remarkCallouts from './src/lib/util/remarkCallouts.mjs';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -20,7 +21,8 @@ const config = {
 			},
 			highlight: {
 				highlighter
-			}
+			},
+			remarkPlugins: []
 		}),
 		vitePreprocess()
 	],
