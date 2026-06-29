@@ -2,7 +2,7 @@
 description: Formula collection for Information Retrieval in High Dimensional Data
   at TUM
 image: null
-last_update: '2026-06-26T19:53:44.407143+00:00'
+last_update: '2026-06-29T12:03:26.373735+00:00'
 layout: article
 repository: https://github.com/lufixSch/tum_info_ret_formulas
 repository_icon: github

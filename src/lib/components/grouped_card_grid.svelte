@@ -26,19 +26,30 @@
 	function groupArticles(articles: { slug: string; metadata: mdMetaData }[]): GroupedArticles {
 		const result: GroupedArticles = { uncategorized: [], groups: {} };
 
-		let category: string | undefined = undefined;
+		let categoryTree: string[] = [];
 		articles.forEach(({ slug, metadata }) => {
 			const level = getLevel(slug);
 
 			if (metadata?.header) {
-				category = metadata?.title;
-				result.groups[category] = { level, articles: [] };
+				if (level <= categoryTree.length) {
+					categoryTree.splice(level);
+				}
+				categoryTree.push(metadata?.title);
+				result.groups[metadata?.title] = { level, articles: [] };
 				return;
 			}
 
-			if (category == undefined) {
+			if (level == 0) {
 				result.uncategorized.push({ slug, metadata });
 			} else {
+				const category = [...categoryTree].reverse().find((_, idx) => idx < level);
+				if (category == undefined) {
+					console.error(
+						`Unable to find correct Subcategory for ${slug} - Category Tree: ${categoryTree}, Level: ${level}`
+					);
+					return;
+				}
+
 				result.groups[category].articles.push({ slug, metadata });
 			}
 		});
@@ -60,7 +71,7 @@
 {/if}
 
 {#each Object.entries(grouped.groups) as [groupName, { level, articles }]}
-	<div class="mb-8">
+	<div class:mb-8={articles.length > 0}>
 		{#if level < 1}
 			<h3>{groupName}</h3>
 		{:else if level < 2}
@@ -70,10 +81,13 @@
 		{:else}
 			<h6>{groupName}</h6>
 		{/if}
-		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
-			{#each articles as article}
-				<Card {article} />
-			{/each}
-		</div>
+
+		{#if articles.length > 0}
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+				{#each articles as article}
+					<Card {article} />
+				{/each}
+			</div>
+		{/if}
 	</div>
 {/each}
