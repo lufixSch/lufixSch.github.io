@@ -14,14 +14,15 @@
 <section id="about-me" class="pt-12 md:pt-12 lg:pt-24 pb-8 md:pb-4 lg:pb-16">
 	<Section title="Hi there!">
 		<p>
-			I'm Lukas, a tech enthusiast with a passion for creating innovative electronic and software
-			solutions.<br />
-			I studied Electronics and Computer Engineering at the FH Joanneum in Graz, where I earned my Bachelor
-			of Science, and I'm now pursuing my Master's degree at the Technical University in Munich.
+			I'm Lukas. I build things, from analog circuits to full-stack applications. I studied
+			Electronics and Computer Engineering at the FH Joanneum in Graz and got my Bachelor of Science
+			there. After that, I completed my Master's in Electrical Engineering and Information
+			Technology at the Technical University of Munich with a focus on neuroscience and machine
+			learning.
 			<br />
-			On my website, you'll find my private and academic projects, including my Bachelor thesis and LaTeX
-			templates. Feel free to explore these resources, and get in touch if you have any questions or
-			feedback!
+			This site contains my private and academic projects, including my Bachelor thesis as well as LaTeX
+			and Typst templates. Have a look around, and feel free to reach out if you have questions or want
+			to get in touch.
 		</p>
 	</Section>
 </section>
