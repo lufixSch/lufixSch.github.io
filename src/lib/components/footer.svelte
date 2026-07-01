@@ -8,9 +8,9 @@
 	</p>
 	<p>
 		If you want to get in touch, you can send me an email at <a
-			href="mailto:lukas.schuettler@tum.de"
+			href="mailto:lukas.schuettler@e-mail.de"
 		>
-			lukas.schuettler@tum.de</a
+			lukas.schuettler@e-mail.de</a
 		>.
 	</p>
 </footer>
